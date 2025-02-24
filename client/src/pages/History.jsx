@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar } from "../assets";
+import { Avatar, HistoryDummy } from "../assets";
 import { historyicons } from "../lib/historyicons";
 
 function History() {
@@ -38,7 +38,126 @@ function History() {
               </p>
               <span>{historyicons.delet}</span>
             </div>
-            <div className=""></div>
+
+            {/* history messages  */}
+            <div className="flex flex-col gap-[8px]">
+              {/* message 1  */}
+              <div className="p-[12px] flex gap-[8px] items-start dark:bg-[#343839] rounded-[12px]">
+                <section className="">{historyicons.check}</section>
+                <section className="">
+                  <p className=" text-[16px] font-[600] leading-[24px] ">
+                    Brainwave AI UI Kit
+                  </p>
+                  <p className=" text-[12px] font-[500] leading-[20px] text-[#6C7275]">
+                    Write code (HTML, CSS and JS) for a simple
+                  </p>
+
+                  <div className="pt-[8px] flex justify-between items-center">
+                    <img
+                      src={Avatar}
+                      className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
+                      alt=""
+                    />
+
+                    <p className=" text-[11px] font-[500] leading-[16px] text-[#6C7275]">
+                      Just now
+                    </p>
+                  </div>
+                </section>
+              </div>
+
+              {/* message 2  */}
+              <div className="p-[12px] flex gap-[8px] items-start  rounded-[12px]">
+                <section className="">{historyicons.check}</section>
+                <section className="">
+                  <p className=" text-[16px] font-[600] leading-[24px] ">
+                    Welcome page with input
+                  </p>
+                  <p className=" text-[12px] font-[500] leading-[20px] text-[#6C7275]">
+                    Write code (HTML, CSS and JS) for a simple
+                  </p>
+                  <img
+                    src={HistoryDummy}
+                    className=" w-full h-[168px] object-cover rounded-[12px] my-[8px]"
+                    alt=""
+                  />
+                  <div className="pt-[8px] flex justify-between items-center">
+                    <img
+                      src={Avatar}
+                      className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
+                      alt=""
+                    />
+
+                    <p className=" text-[11px] font-[500] leading-[16px] text-[#6C7275]">
+                      Just now
+                    </p>
+                  </div>
+                </section>
+              </div>
+
+              {/* message 3  */}
+              <div className="p-[12px] flex gap-[8px] items-start  rounded-[12px]">
+                <section className="">{historyicons.check}</section>
+                <section className="">
+                  <p className=" text-[16px] font-[600] leading-[24px] ">
+                    Photo retouch
+                  </p>
+                  <p className=" text-[12px] font-[500] leading-[20px] text-[#6C7275]">
+                    Write code (HTML, CSS and JS) for a simple
+                  </p>
+
+                  <div className="pt-[8px] flex justify-between items-center">
+                    <div className=" relative h-[30px] w-[200px]">
+                      <img
+                        src={Avatar}
+                        className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-0 z-0 border-[2px] dark:border-[#232627] border-white"
+                        alt=""
+                      />
+
+                      <img
+                        src={Avatar}
+                        className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-[20px] z-10  border-[2px] dark:border-[#232627] border-white"
+                        alt=""
+                      />
+
+                      <img
+                        src={Avatar}
+                        className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-[40px] z-30 border-[2px] dark:border-[#232627] border-white"
+                        alt=""
+                      />
+                    </div>
+                    <p className=" text-[11px] font-[500] leading-[16px] text-[#6C7275]">
+                      Just now
+                    </p>
+                  </div>
+                </section>
+              </div>
+
+              {/* message 4  */}
+              <div className="p-[12px] flex gap-[8px] items-start  rounded-[12px]">
+                <section className="">{historyicons.check}</section>
+                <section className="">
+                  <p className=" text-[16px] font-[600] leading-[24px] ">
+                    Auto generate title
+                  </p>
+                  <p className=" text-[12px] font-[500] leading-[20px] text-[#6C7275]">
+                    Write code (HTML, CSS and JS) for a simple
+                  </p>
+
+                  <div className="pt-[8px] flex justify-between items-center">
+                    <img
+                      src={Avatar}
+                      className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
+                      alt=""
+                    />
+
+                    <p className=" text-[11px] font-[500] leading-[16px] text-[#6C7275]">
+                      Just now
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </div>
           </section>
         </div>
 
