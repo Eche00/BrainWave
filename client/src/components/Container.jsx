@@ -4,11 +4,11 @@ import Sidebar from "./navigation/Sidebar";
 
 function Container() {
   return (
-    <div className=" flex">
-      <section className=" hidden sm:flex  bg-[#141718] text-white  lg:w-fit  sm:w-[96px]">
+    <div className=" flex gap-0">
+      <section className=" hidden sm:flex  bg-[#141718] text-white  lg:w-fit  sm:w-[96px] p-0 m-0 border-none">
         <Sidebar />
       </section>
-      <section className=" flex flex-1 dark:bg-black bg-white">
+      <section className=" flex flex-1 dark:bg-black bg-white m-0 p-0 border-none">
         <Outlet />
       </section>
     </div>

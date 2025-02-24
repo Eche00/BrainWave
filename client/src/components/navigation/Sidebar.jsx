@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme, toggleTheme } from "../../redux/theme/themeSlice";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
 
@@ -11,7 +11,7 @@ function Sidebar() {
   const dispatch = useDispatch();
 
   return (
-    <div className="text-black   h-[100vh]">
+    <div className="text-black   h-[100vh] border-2 border-[#141718]">
       {/* container  */}
       <body className=" flex flex-col justify-between w-fit h-full ">
         <main>
@@ -25,29 +25,59 @@ function Sidebar() {
           {/* navigation  */}
           <div className="py-[16px] lg:border-b-[1px] border-[#232627] text-[#E8ECEFBF]">
             <ul className="lg:mx-[24px] mx-[15px]  lg:border-none  border-b-[1px] border-[#80a8b6]  ">
-              <Link className=" text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]  ">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]  "
+                    : " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]  "
+                }>
                 <span>{sidebaricons.chat}</span>{" "}
                 <p className=" lg:flex hidden">Chats</p>
-              </Link>
-              <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between">
+              </NavLink>
+              <NavLink
+                to="/search"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between  bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between"
+                }>
                 <section className=" flex items-center  gap-[20px]">
                   <span>{sidebaricons.search}</span>
                   <p className=" lg:flex hidden">Search</p>
                 </section>{" "}
                 <span className=" lg:flex hidden">{sidebaricons.search2}</span>
-              </Link>
-              <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] ">
+              </NavLink>
+              <NavLink
+                to="/subscription"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                }>
                 <span>{sidebaricons.manage}</span>
                 <p className=" lg:flex hidden">Manage subscription</p>
-              </Link>
-              <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] ">
+              </NavLink>
+              <NavLink
+                to="/updates"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                }>
                 <span>{sidebaricons.updates}</span>
                 <p className=" lg:flex hidden">Updates & FAQ</p>
-              </Link>
-              <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] ">
+              </NavLink>
+              <NavLink
+                to="/setting"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                }>
                 <span>{sidebaricons.setting}</span>
                 <p className=" lg:flex hidden">Setting</p>
-              </Link>
+              </NavLink>
             </ul>
           </div>
 
