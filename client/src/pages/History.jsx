@@ -4,7 +4,7 @@ import { historyicons } from "../lib/historyicons";
 
 function History() {
   return (
-    <div className=" hidden lg:flex lg:w-[320px] xl:w-[360px] border-l-[1px] dark:border-[#343839] border-[#E8ECEF]">
+    <div className=" hidden lg:flex lg:w-[500px]  border-l-[1px] dark:border-[#343839] border-[#E8ECEF]">
       {/* Container  */}
       <main className=" w-full flex flex-col justify-between">
         {/* top 2 sections  */}
@@ -107,7 +107,7 @@ function History() {
                   </p>
 
                   <div className="pt-[8px] flex justify-between items-center">
-                    <div className=" relative h-[30px] w-[200px]">
+                    <div className=" relative h-[30px] w-[50px]">
                       <img
                         src={Avatar}
                         className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-0 z-0 border-[2px] dark:border-[#232627] border-white"
