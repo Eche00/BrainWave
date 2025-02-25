@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import Subscription from "./pages/Subscription";
 import Updates from "./pages/Updates";
 import Setting from "./pages/Setting";
+import Auth from "./getAuth/Auth";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/updates" element={<Updates />} />
             <Route path="/setting" element={<Setting />} />
           </Route>
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </Router>
     </div>
