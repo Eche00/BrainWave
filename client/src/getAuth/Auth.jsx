@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { authicons } from "../lib/authicon";
+import { Link } from "react-router-dom";
 
 function Auth() {
   const [signIn, setSignIn] = useState(true);
@@ -37,12 +38,14 @@ function Auth() {
           <Sidebar />
         </section>
         {/* auth contents  */}
-        <section className=" py-[24px] pr-[24px] md:pl-0 pl-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718]  h-screen">
-          <div className=" bg-white dark:bg-[#232627] h-full rounded-[20px] w-full flex relative  items-center justify-center">
+        <section className=" sm:py-[24px] sm:pr-[24px] md:pl-0 sm:pl-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718]  h-screen">
+          <div className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex relative  items-center justify-center">
             {/* exit icon  */}
-            <span className=" absolute sm:top-[32px] sm:right-[32px] top-[10px] right-[10px]">
+            <Link
+              to="/"
+              className=" absolute sm:top-[32px] sm:right-[32px] top-[10px] right-[10px]">
               {authicons.exit}
-            </span>
+            </Link>
 
             {/* auth components  */}
             {resetPassword ? (
