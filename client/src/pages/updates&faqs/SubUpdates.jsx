@@ -29,7 +29,7 @@ function SubUpdates() {
               </span>
               <div>
                 <h1 className=" text-[#141718] dark:text-[#FEFEFE] text-[28px] font-[700] leading-[40px]">
-                  Add chat lis
+                  Add chat list
                 </h1>
               </div>
               {/* first inputs  */}
