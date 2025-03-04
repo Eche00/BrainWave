@@ -16,17 +16,18 @@ function Updates() {
     }
   };
   return (
-    <div className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718]  h-screen overscroll-none">
+    <div className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718] sm:h-screen   overscroll-none">
       {/* container  */}
-      <main className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] py-[80px]  overflow-hidden">
+      <main className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] sm:py-[80px] ">
         <div className=" bg-white dark:bg-[#232627] h-fit sm:rounded-[20px] w-full flex flex-col gap-[48px] py-[80px] overflow-scroll">
           {/* head section  */}
-          <section className=" flex flex-col gap-[16px]   w-[70%] mx-auto">
+          <section className=" flex flex-col gap-[16px]   sm:w-[70%] w-[90%] mx-auto">
             <h1 className=" text-[48px] font-[700] leading-[56px] text-[#141718] dark:text-[#FEFEFE]">
-              Update and FAQ
+              Update & FAQ
             </h1>
             <p className=" text-[24px] font-[400] leading-[36px] text-[#6C7275]">
-              Features, fixes & improvements.
+              Features, fixes & <br className=" block sm:hidden" />{" "}
+              improvements.
             </p>
           </section>
           {/* button section  */}
@@ -54,7 +55,7 @@ function Updates() {
           </section>
 
           {/* category section  */}
-          <section className=" flex w-[70%] mx-auto ">
+          <section className=" flex sm:w-[70%] w-[90%] mx-auto ">
             {updates && <SubUpdates />}
             {Faqs && <SubFaqs />}
           </section>
