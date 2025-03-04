@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <div className="text-black   h-[100vh] border-2 border-[#141718]">
       {/* container  */}
-      <body className=" flex flex-col justify-between w-fit h-full ">
+      <body className=" flex flex-col justify-between w-fit h-full  overflow-scroll">
         <main>
           {/* header  */}
           <header className=" py-[40px] px-[24px] flex items-center justify-between">
