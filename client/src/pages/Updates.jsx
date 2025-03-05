@@ -21,7 +21,7 @@ function Updates() {
       <main className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] sm:py-[80px] ">
         <div className=" bg-white dark:bg-[#232627] h-fit sm:rounded-[20px] w-full flex flex-col gap-[48px] py-[80px] overflow-scroll">
           {/* head section  */}
-          <section className=" flex flex-col gap-[16px]   sm:w-[70%] w-[90%] mx-auto">
+          <section className=" flex flex-col gap-[16px]   md:w-[70%] lg:w-[80%] w-[90%] mx-auto">
             <h1 className=" text-[48px] font-[700] leading-[56px] text-[#141718] dark:text-[#FEFEFE]">
               Update & FAQ
             </h1>
@@ -55,7 +55,7 @@ function Updates() {
           </section>
 
           {/* category section  */}
-          <section className=" flex sm:w-[70%] w-[90%] mx-auto ">
+          <section className=" flex xl:w-[80%] lg:w-[95%] w-[90%] mx-auto ">
             {updates && <SubUpdates />}
             {Faqs && <SubFaqs />}
           </section>
