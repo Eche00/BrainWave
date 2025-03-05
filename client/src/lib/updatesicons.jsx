@@ -73,18 +73,16 @@ export const updateicons = {
   ),
   tick: (
     <svg
-      width="12"
-      height="11"
-      viewBox="0 0 12 11"
+      width="13"
+      height="9"
+      viewBox="0 0 13 9"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <rect
-        x="0.75"
-        y="0.25"
-        width="10.5"
-        height="10.5"
-        rx="3"
-        fill="#3E90F0"
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M11.9419 0.808058C12.186 1.05214 12.186 1.44786 11.9419 1.69194L5.06694 8.56694C4.82286 8.81102 4.42714 8.81102 4.18306 8.56694L1.05806 5.44194C0.813981 5.19786 0.813981 4.80214 1.05806 4.55806C1.30214 4.31398 1.69786 4.31398 1.94194 4.55806L4.625 7.24112L11.0581 0.808058C11.3021 0.563981 11.6979 0.563981 11.9419 0.808058Z"
+        fill="#6C7275"
       />
     </svg>
   ),
@@ -118,6 +116,38 @@ export const updateicons = {
       <path
         d="M19.5 10.5L10.5 19.5M10.5 10.5L19.5 19.5"
         stroke="#343839"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
+  arrowdowndark: (
+    <svg
+      width="12"
+      height="7"
+      viewBox="0 0 12 7"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1.5 1.25L6 5.75L10.5 1.25"
+        stroke="#141718"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
+  arrowdownlight: (
+    <svg
+      width="12"
+      height="7"
+      viewBox="0 0 12 7"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1.5 1.25L6 5.75L10.5 1.25"
+        stroke="#E8ECEF"
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
