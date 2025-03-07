@@ -4,7 +4,7 @@ import { homeicons } from "../lib/homeicons";
 
 function Home() {
   return (
-    <div className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718] ">
+    <div className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718]  z-0">
       {/* Container  */}
       <main className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex justify-between">
         {/* chat section  */}
@@ -27,7 +27,7 @@ function Home() {
                 {homeicons.imageedit}
                 <p className=" flex items-center sm:w-[368px] w-full justify-between text-[18px] font-[600] leading-[2px]">
                   Photo edition{" "}
-                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600]">
+                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600] z-0">
                     &#8599;
                   </span>
                 </p>
@@ -37,7 +37,7 @@ function Home() {
                 {homeicons.videogeneration}
                 <p className=" flex items-center sm:w-[368px] w-full justify-between text-[18px] font-[600] leading-[2px]">
                   Video generation{" "}
-                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600]">
+                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600] z-0">
                     &#8599;
                   </span>
                 </p>
@@ -47,7 +47,7 @@ function Home() {
                 {homeicons.education}
                 <p className=" flex items-center sm:w-[368px] w-full justify-between text-[18px] font-[600] leading-[2px]">
                   Education feedback{" "}
-                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600]">
+                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600] z-0">
                     &#8599;
                   </span>
                 </p>
@@ -57,7 +57,7 @@ function Home() {
                 {homeicons.codegeneration}
                 <p className=" flex items-center sm:w-[368px] w-full justify-between text-[18px] font-[600] leading-[2px]">
                   Code generation
-                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600]">
+                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600] z-0">
                     &#8599;
                   </span>
                 </p>
@@ -67,7 +67,7 @@ function Home() {
                 {homeicons.audiogeneration}
                 <p className=" flex items-center sm:w-[368px] w-full justify-between text-[18px] font-[600] leading-[2px]">
                   Audio generation{" "}
-                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600]">
+                  <span className=" text-[#6C7275] dark:hover:text-[#6C7275] dark:group-hover:text-[#6C7275] group-hover:text-black rotate-45 text-[20px] font-[600] z-0">
                     &#8599;
                   </span>
                 </p>
