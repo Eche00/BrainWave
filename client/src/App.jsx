@@ -17,7 +17,6 @@ function App() {
           {/* router group with sidebar  */}
           <Route element={<Container />}>
             <Route index element={<Home />} />
-            <Route path="/search" element={<Search />} />
             <Route path="/subscription" element={<Subscription />} />
             <Route path="/updates" element={<Updates />} />
             <Route path="/setting" element={<Setting />} />

@@ -4,9 +4,11 @@ import { setTheme, toggleTheme } from "../../redux/theme/themeSlice";
 import { Link, NavLink } from "react-router-dom";
 import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
+import Search from "../../pages/Search";
 
 function Sidebar() {
   const [drop, setDrop] = useState(false);
+  const [search, setSearch] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
@@ -35,19 +37,15 @@ function Sidebar() {
                 <span>{sidebaricons.chat}</span>{" "}
                 <p className=" lg:flex hidden">Chats</p>
               </NavLink>
-              <NavLink
-                to="/search"
-                className={({ isActive }) =>
-                  isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between  bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between"
-                }>
+              <div
+                className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer"
+                onClick={() => setSearch(true)}>
                 <section className=" flex items-center  gap-[20px]">
                   <span>{sidebaricons.search}</span>
                   <p className=" lg:flex hidden">Search</p>
                 </section>{" "}
                 <span className=" lg:flex hidden">{sidebaricons.search2}</span>
-              </NavLink>
+              </div>
               <NavLink
                 to="/subscription"
                 className={({ isActive }) =>
@@ -218,6 +216,7 @@ function Sidebar() {
             {theme === "light" ? sidebaricons.darkout : sidebaricons.lightout}
           </button>
         </div>
+        {search && <Search />}
       </body>
     </div>
   );
