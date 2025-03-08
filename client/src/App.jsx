@@ -20,6 +20,7 @@ function App() {
             <Route path="/subscription" element={<Subscription />} />
             <Route path="/updates" element={<Updates />} />
             <Route path="/setting" element={<Setting />} />
+            <Route path="/search" element={<Search />} />
           </Route>
           <Route path="/auth" element={<Auth />} />
         </Routes>
