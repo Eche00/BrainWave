@@ -17,12 +17,12 @@ function App() {
           {/* router group with sidebar  */}
           <Route element={<Container />}>
             <Route index element={<Home />} />
-            <Route path="/subscription" element={<Subscription />} />
             <Route path="/updates" element={<Updates />} />
             <Route path="/setting" element={<Setting />} />
             <Route path="/search" element={<Search />} />
           </Route>
           <Route path="/auth" element={<Auth />} />
+          <Route path="/subscription" element={<Subscription />} />
         </Routes>
       </Router>
     </div>
