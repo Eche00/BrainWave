@@ -4,7 +4,8 @@ import Sidebar from "./navigation/Sidebar";
 import Search from "../pages/Search";
 
 function Container() {
-  const [search, setSearch] = useState(true);
+  const [search, setSearch] = useState(false);
+
   return (
     <div className=" flex gap-0">
       {search && <Search setSearch={setSearch} />}
