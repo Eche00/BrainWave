@@ -2,14 +2,18 @@ import React from "react";
 import { searchicon } from "../lib/searchicon";
 import { Avatar } from "../assets";
 
-function Search() {
+function Search({ setSearch }) {
   return (
-    <div className=" fixed w-full h-[100vh] left-0 bg-[#141718BF]  flex items-center justify-center z-50">
+    <div className=" fixed w-full sm:h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50">
       {/* container  */}
-      <main className=" bg-[#FEFEFE] dark:bg-[#141718] w-[600px]  sm:rounded-[24px] flex flex-col overflow-scroll max-h-[930px]">
+      <main className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[600px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[930px] ">
         {/* header  */}
-        <section className=" border-b-[1px] border-[#E8ECEF] dark:border-[#232627] py-[20px] px-[40px] gap-[24px] flex items-center">
-          <span>{searchicon.searchTop}</span>
+        <section className=" border-b-[1px] border-[#E8ECEF] dark:border-[#232627] sm:sm:py-[20px]  py-[16px] sm:px-[40px] px-[16px] gap-[24px] flex items-center">
+          <span className="sm:flex hidden">{searchicon.searchTop}</span>
+          <div className="flex sm:hidden" onClick={() => setSearch(false)}>
+            <spn className="dark:hidden flex">{searchicon.exitlight}</spn>
+            <spn className="hidden dark:flex">{searchicon.exitdark}</spn>
+          </div>
           <input
             type="text"
             placeholder="Search"
@@ -17,42 +21,42 @@ function Search() {
           />
         </section>
         {/* search category  */}
-        <section className="py-[20px] px-[40px] gap-[24px] flex items-center">
-          {/* 1 */}
-          <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px]">
-            <span className=" dark:hidden block">{searchicon.searchlight}</span>
-            <span className=" hidden dark:block">{searchicon.searchdark}</span>
-            <input
-              type="text"
-              className=" outline-none placeholder:text-black dark:placeholder:text-white"
-              placeholder="Only title"
-            />
-          </div>
-          {/* 2 */}
-          <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px] justify-between">
-            <article className="flex items-center gap-[8px]">
-              <span>{searchicon.person}</span>
-              <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275] whitespace-nowrap">
-                Created by
-              </p>
-            </article>
-            <span>{searchicon.dropdown}</span>
-          </div>
-          {/* 3 */}
-          <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px] justify-between">
-            <article className="flex items-center gap-[8px]">
-              <span>{searchicon.time}</span>
-              <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275]">
-                Date{" "}
-              </p>
-            </article>
-            <span>{searchicon.dropdown}</span>
-          </div>
-        </section>
+        <div className=" sm:max-w-[600px] w-screen overflow-scroll">
+          <section className="py-[20px] sm:px-[40px] px-[16px]  sm:gap-[24px] gap-[12px] flex items-center">
+            {/* 1 */}
+            <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px]">
+              <input
+                type="text"
+                className=" outline-none placeholder:text-black dark:placeholder:text-white"
+                placeholder="Only title"
+              />
+            </div>
+            {/* 2 */}
+            <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px] justify-between">
+              <article className="flex items-center gap-[8px]">
+                <span>{searchicon.person}</span>
+                <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275] whitespace-nowrap">
+                  Created by
+                </p>
+              </article>
+              <span>{searchicon.dropdown}</span>
+            </div>
+            {/* 3 */}
+            <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px] justify-between">
+              <article className="flex items-center gap-[8px]">
+                <span>{searchicon.time}</span>
+                <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275]">
+                  Date{" "}
+                </p>
+              </article>
+              <span>{searchicon.dropdown}</span>
+            </div>
+          </section>
+        </div>
 
         {/* today mesages */}
-        <section className="flex flex-col px-[20px]">
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] ">
+        <section className="flex flex-col sm:px-[20px] px-[8px]">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] ">
             <h2 className=" text-[18px] font-[600] leading-[32px] text-[#141718] dark:text-white">
               Today
             </h2>
@@ -61,7 +65,7 @@ function Search() {
             </p>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -75,11 +79,17 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white text-nowrap">
-                How can I be more productive?
+                How can I be more
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden"> productive?</span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF]  text-nowrap">
-                With increasing demands in personal and professional life,
-                people..
+                With increasing demands in{" "}
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  {" "}
+                  personal and professional life, people...
+                </span>
               </p>
             </section>
             <section className="">
@@ -92,7 +102,7 @@ function Search() {
             </section>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -106,11 +116,19 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white text-nowrap">
-                How can I learn a new language quickly?
+                How can I learn a new
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  {" "}
+                  language quickly?
+                </span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF] text-nowrap">
-                Language learning is a popular activity, and people often ask
-                for...
+                Language learning is a popula
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline hidden">
+                  r activity, and people often ask for...
+                </span>
               </p>
             </section>
             <section className="">
@@ -123,7 +141,7 @@ function Search() {
             </section>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -137,11 +155,16 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white text-nowrap">
-                Write a Welcome Page in HTML and CSS
+                Write a Welcome Page
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden"> in HTML and CSS</span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF] text-nowrap">
-                Write code (HTML, CSS and JS) for a simple form with 3 input...
-                fields
+                Write code (HTML, CSS and JS
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline-block hidden">
+                  ) for a simple form with 3 input fields...
+                </span>
               </p>
             </section>
             <section className="">
@@ -154,7 +177,7 @@ function Search() {
             </section>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -168,11 +191,18 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white text-nowrap">
-                How can I optimize my code for search engine...
+                How can I optimize my
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  code for search engine...
+                </span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF] text-nowrap">
-                Write code (HTML, CSS and JS) for a simple form with 3 input...
-                fields
+                Write code (HTML, CSS and JS
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline-block hidden">
+                  ) for a simple form with 3 input fields...
+                </span>
               </p>
             </section>
             <section className="">
@@ -185,7 +215,7 @@ function Search() {
             </section>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -199,11 +229,18 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white text-nowrap">
-                How can I make my website more secure against...
+                How can I make my
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  website more secure against...
+                </span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF] text-nowrap">
-                Write code (HTML, CSS and JS) for a simple form with 3 input...
-                fields
+                Write code (HTML, CSS and JS
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline-block hidden">
+                  ) for a simple form with 3 input fields...
+                </span>
               </p>
             </section>
             <section className="">
@@ -218,14 +255,14 @@ function Search() {
         </section>
 
         {/* last 30 days mesages */}
-        <section className="flex flex-col px-[20px]">
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] ">
+        <section className="flex flex-col sm:px-[20px] px-[8px]">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] ">
             <h2 className=" text-[18px] font-[600] leading-[32px] text-[#141718] dark:text-white">
               Last 30 ays
             </h2>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -239,11 +276,18 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white">
-                What's the best way to implement a database in m
+                What's the best way to{" "}
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  implement a database in m...
+                </span>
               </h2>
               <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF]  text-nowrap">
-                Write code (HTML, CSS and JS) for a simple form with 3 input
-                fields
+                Write code (HTML, CSS and JS
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline-block hidden">
+                  ) for a simple form with 3 input fields...
+                </span>
               </p>
             </section>
             <section className="">
@@ -256,7 +300,7 @@ function Search() {
             </section>
           </div>
           {/* messages  */}
-          <div className="flex items-center gap-[20px] py-[20px] px-[20px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
+          <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
             {/* space */}
             <section className=" w-fit relative">
               <img
@@ -270,11 +314,18 @@ function Search() {
             {/* name and message  */}
             <section className="flex flex-col  gap-[4px]">
               <h2 className="text-[16px] font-[600] leading-[24px] text-[#141718] dark:text-white">
-                What is the best way to prepare for a job interview?
+                What is the best way t
+                <span className="inline-block sm:hidden">...</span>{" "}
+                <span className="sm:inline-block hidden">
+                  o prepare for a job interview?
+                </span>
               </h2>
-              <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF] ">
-                Job interviews are an important step in securing a job, and
-                people
+              <p className="text-[12px] font-[500] leading-[20px] text-[#6C7275BF]  text-nowrap">
+                Job interviews are an importan{" "}
+                <span className="inline-block sm:hidden">...</span>
+                <span className="sm:inline-block hidden">
+                  t step in securing a job, and people...
+                </span>
               </p>
             </section>
             <section className="">
