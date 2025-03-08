@@ -6,9 +6,8 @@ import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
 import Search from "../../pages/Search";
 
-function Sidebar() {
+function Sidebar({ setSearch }) {
   const [drop, setDrop] = useState(false);
-  const [search, setSearch] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
@@ -46,6 +45,7 @@ function Sidebar() {
                 </section>{" "}
                 <span className=" lg:flex hidden">{sidebaricons.search2}</span>
               </div>
+
               <NavLink
                 to="/subscription"
                 className={({ isActive }) =>
@@ -216,7 +216,6 @@ function Sidebar() {
             {theme === "light" ? sidebaricons.darkout : sidebaricons.lightout}
           </button>
         </div>
-        {search && <Search />}
       </body>
     </div>
   );
