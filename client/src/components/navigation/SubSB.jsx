@@ -122,7 +122,7 @@ function SubSB({ setSearch }) {
             <span className=" bg-[#3FDD78] border-[4px] border-[#232627] rounded-full w-[10px] h-[10px] absolute p-[6px] bottom-[-4px] right-[-4px]"></span>
           </section>
           <button
-            className="w-[64px] bg-[#232627] h-[64px] rounded-[12px] flex items-center justify-center"
+            className="w-[64px] bg-[#232627] h-[64px] rounded-[12px] flex items-center justify-center cursor-pointer"
             onClick={() => dispatch(toggleTheme())}>
             {theme === "light" ? sidebaricons.darkout : sidebaricons.lightout}
           </button>
