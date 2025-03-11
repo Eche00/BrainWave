@@ -4,8 +4,8 @@ import Pricing from "./subcontainer/Pricing";
 import Checkout from "./subcontainer/Checkout";
 
 function Subscription() {
-  const [billing, setBilling] = useState(false);
-  const [pricing, setPricing] = useState(true);
+  const [billing, setBilling] = useState(true);
+  const [pricing, setPricing] = useState(false);
   return (
     <div className="flex">
       <SubSB />
