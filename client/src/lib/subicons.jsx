@@ -143,4 +143,64 @@ export const subicons = {
       />
     </svg>
   ),
+  check4: (
+    <svg
+      width="128"
+      height="128"
+      viewBox="0 0 128 128"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect width="128" height="128" rx="64" fill="#3FDD78" />
+      <path
+        d="M80 52L58 74L48 64"
+        stroke="#141718"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
+  check5: (
+    <svg
+      width="80"
+      height="80"
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="40" fill="#3FDD78" />
+      <path
+        d="M50.6654 32L35.9987 46.6667L29.332 40"
+        stroke="#FEFEFE"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
+  exit: (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect
+        x="1"
+        y="1"
+        width="38"
+        height="38"
+        rx="19"
+        stroke="#6C7275"
+        stroke-opacity="0.25"
+        stroke-width="2"
+      />
+      <path
+        d="M26 14L14 26M14 14L26 26"
+        stroke="#6C7275"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
 };
