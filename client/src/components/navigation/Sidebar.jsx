@@ -6,7 +6,7 @@ import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
 import Search from "../../pages/Search";
 
-function Sidebar({ setSearch }) {
+function Sidebar({ setSearch, setAddlist }) {
   const [drop, setDrop] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -132,12 +132,14 @@ function Sidebar({ setSearch }) {
                     128
                   </span>
                 </Link>
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between">
+                <button
+                  className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer"
+                  onClick={() => setAddlist(true)}>
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.add}</span>
                     <p className=" lg:flex hidden">New list</p>
                   </section>{" "}
-                </Link>
+                </button>
               </section>
             )}
           </div>
