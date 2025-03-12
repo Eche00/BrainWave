@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { subicons } from "../../lib/subicons";
 
-function Pricing() {
+function Pricing({ setBilling, setPricing }) {
   const [display, setDisplay] = useState(false);
 
+  const handleUpgrade = (e) => {
+    e.preventDefault();
+    setPricing(false);
+    setBilling(true);
+  };
+
   return (
-    <main className=" bg-[#F3F5F7] dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] sm:pt-[80px]  overflow-y-scroll overflow-hidden">
+    <main className=" bg-[#F3F5F7] dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] sm:pt-[80px]  overflow-y-scroll overflow-hidden pt-[48px]">
       {/* header  */}
       <section className=" flex flex-col items-center justify-center gap-[16px] w-full">
         <h1 className="text-[#141718] dark:text-white xl:text-[48px] text-[40px] font-[700] xl:leading-[56px] leading-[48px] text-center">
@@ -77,7 +83,9 @@ function Pricing() {
                     <span>{subicons.check}</span> Limited AI capabilities
                   </p>
                 </div>
-                <button className="w-full py-[12px] border-[2px] border-[#E8ECEF] dark:border-[#232627] text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#232627] dark:text-[#6C727580] cursor-pointer">
+                <button
+                  className="w-full py-[12px] border-[2px] border-[#E8ECEF] dark:border-[#232627] text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#232627] dark:text-[#6C727580] cursor-pointer"
+                  onClick={handleUpgrade}>
                   Current plan
                 </button>
               </div>
@@ -121,7 +129,9 @@ function Pricing() {
                     <span>{subicons.check}</span> Access to AI capabilities
                   </p>
                 </div>
-                <button className="w-full py-[12px] border-[2px] border-[#E8ECEF] dark:border-[#232627] text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#232627] dark:text-[#6C727580] cursor-pointer">
+                <button
+                  className="w-full py-[12px] border-[2px] border-[#E8ECEF] dark:border-[#232627] text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#232627] dark:text-[#6C727580] cursor-pointer"
+                  onClick={handleUpgrade}>
                   Upgrade
                 </button>
               </div>
@@ -165,7 +175,9 @@ function Pricing() {
                     <span>{subicons.check}</span> Enterprise-level support
                   </p>
                 </div>
-                <button className="w-full py-[12px]  text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#FEFEFE] bg-[#0084FF] cursor-pointer">
+                <button
+                  className="w-full py-[12px]  text-[16px] font-[600] leading-[24px] rounded-[12px] text-[#FEFEFE] bg-[#0084FF] cursor-pointer"
+                  onClick={handleUpgrade}>
                   Upgrade
                 </button>
               </div>
