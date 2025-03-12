@@ -3,6 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --breakpoint-xs: 200px;
+  --breakpoint-xxs: 500px;
   --breakpoint-sm: 760px;
   --breakpoint-md: 1024px;
   --breakpoint-lg: 1200px;
