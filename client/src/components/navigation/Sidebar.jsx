@@ -6,7 +6,7 @@ import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
 import Search from "../../pages/Search";
 
-function Sidebar({ setSearch, setAddlist }) {
+function Sidebar({ setSearch, setAddlist, setSettings }) {
   const [drop, setDrop] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -66,16 +66,12 @@ function Sidebar({ setSearch, setAddlist }) {
                 <span>{sidebaricons.updates}</span>
                 <p className=" lg:flex hidden">Updates & FAQ</p>
               </NavLink>
-              <NavLink
-                to="/setting"
-                className={({ isActive }) =>
-                  isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
-                }>
+              <div
+                onClick={() => setSettings(true)}
+                className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  cursor-pointer">
                 <span>{sidebaricons.setting}</span>
                 <p className=" lg:flex hidden">Setting</p>
-              </NavLink>
+              </div>
             </ul>
           </div>
 
