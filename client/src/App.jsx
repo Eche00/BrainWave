@@ -5,7 +5,6 @@ import Container from "./components/Container";
 import Search from "./pages/Search";
 import Subscription from "./pages/Subscription";
 import Updates from "./pages/Updates";
-import Setting from "./pages/Setting";
 import Auth from "./getAuth/Auth";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route element={<Container />}>
             <Route index element={<Home />} />
             <Route path="/updates" element={<Updates />} />
-            <Route path="/setting" element={<Setting />} />
             <Route path="/search" element={<Search />} />
           </Route>
           <Route path="/auth" element={<Auth />} />
