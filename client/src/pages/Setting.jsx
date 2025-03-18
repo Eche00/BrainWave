@@ -11,7 +11,7 @@ import Notification from "./SettingROute/Notification";
 import Appearance from "./SettingROute/Appearance";
 import Signout from "./SettingROute/Signout";
 
-function Setting() {
+function Setting({ setSettings }) {
   const [profile, setProfile] = useState(true);
   const [password, setPasword] = useState(false);
   const [notification, setNotification] = useState(false);
@@ -142,7 +142,9 @@ function Setting() {
       setTeam(false);
       setAppearance(false);
       setSignOut(true);
-      setNavName("Sign Out ");
+      setNavName("Delete account");
+      setNavIcon(settingsicons.delete);
+      setNavIconDark(settingsicons.delete);
     }
     setNav(false);
   };
@@ -154,7 +156,12 @@ function Setting() {
   return (
     <div className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden ">
       {/* container  */}
-      <main className=" bg-[#FEFEFE] dark:bg-[#141718] w-full  sm:w-fit  sm:rounded-[24px] flex  overflow-y-scroll   sm:max-h-[764px] max-h-full overflow-scroll p-[48px]  justify-between gap-[48px] sm:flex-row flex-col">
+      <main className=" bg-[#FEFEFE] dark:bg-[#141718] w-full  sm:w-fit  sm:rounded-[24px] flex  overflow-y-scroll   sm:max-h-[896px] max-h-full overflow-scroll p-[48px]  justify-between gap-[48px] sm:flex-row flex-col relative">
+        <button
+          className="  p-[20px] sm:hidden flex absolute top-0  right-0"
+          onClick={() => setSettings(false)}>
+          {settingsicons.exit}
+        </button>
         {/* navbarsection  */}
         <section className="w-[212px] sm:flex flex-col hidden">
           {/* 1  */}
@@ -421,7 +428,12 @@ function Setting() {
         {/* mobile navbar section  */}
         <section className="w-full flex relative sm:hidden">
           <button className=" font-[600] dark:text-[#FEFEFE] text-[#141718] text-[16px]  leading-[24px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px] py-[12px] w-full flex justify-between px-[16px]">
-            <p className="flex items-center gap-[12px]">
+            <p
+              className={
+                navName === "Delete account"
+                  ? "flex items-center gap-[12px] text-[#D84C10]"
+                  : "flex items-center gap-[12px]"
+              }>
               <span className=" inline-block dark:hidden">{navIcon}</span>{" "}
               <span className=" dark:inline-block hidden">{navIconDark}</span>
               {navName}
@@ -703,7 +715,7 @@ function Setting() {
           {notification && <Notification />}
           {chat && <Chat />}
           {sessions && <Session />}
-          {applications && <Applications />}
+          {applications && <Applications setSettings={setSettings} />}
           {team && <Team />}
           {appearance && <Appearance />}
           {signout && <Signout />}

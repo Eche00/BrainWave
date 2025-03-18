@@ -1,17 +1,18 @@
 import React from "react";
-import { Avatar, HistoryDummy } from "../assets";
-import { historyicons } from "../lib/historyicons";
+import { historyicons } from "../../lib/historyicons";
+import { Avatar, HistoryDummy } from "../../assets";
+import { settingsicons } from "../../lib/settingsicons";
 
-function History() {
+function MobileHistory({ setOpen }) {
   return (
-    <div className=" hidden lg:flex lg:w-[600px]  border-l-[1px] dark:border-[#343839] border-[#E8ECEF]">
+    <div className=" sm:hidden flex w-full border-l-[1px] dark:border-[#343839] border-[#E8ECEF] bg-[#E8ECEF] dark:bg-[#232627]">
       {/* Container  */}
       <main className=" w-full flex flex-col justify-between">
         {/* top 2 sections  */}
         <div>
           {/* header section  */}
 
-          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px]">
+          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px] relastive">
             <span>{historyicons.topselect}</span>
             <section className=" w-fit relative">
               <span className=" bg-[#3FDD78] border-[4px] border-[#232627] rounded-full w-[10px] h-[10px] absolute p-[6px] bottom-[-4px] right-[-4px]"></span>
@@ -25,10 +26,16 @@ function History() {
             <button className=" py-[8px] px-[24px] bg-[#141718] dark:bg-[#FEFEFE] text-[#FEFEFE] dark:text-[#141718] rounded-[12px] text-[16px] font-[600] leading-[24px]">
               Share
             </button>
+
+            <button
+              className="absolute top-[30px] right-[20px]"
+              onClick={() => setOpen(false)}>
+              {settingsicons.exit}
+            </button>
           </header>
 
           {/* chat history section  */}
-          <section className=" p-[24px] flex flex-col gap-[16px]">
+          <section className=" p-[24px] flex flex-col gap-[16px] h-[100vh] overflow-scroll pb-[200px]">
             <div className="flex items-center justify-between px-[12px]">
               <p className=" flex gap-[12px] m-0 items-center text-[#6C7275BF]  text-[14px] font-[600] leading-[24px]">
                 Chat history{" "}
@@ -162,7 +169,7 @@ function History() {
         </div>
 
         {/* new chat section  */}
-        <section className=" p-[24px]">
+        <section className=" p-[24px] fixed bottom-0  flex items-center justify-center w-[80%]">
           <button className=" w-full bg-[#0084FF] rounded-[12px] flex items-center justify-center gap-[8px] py-[12px] text-[16px] font-[600] leading-[24px] text-white">
             {" "}
             {historyicons.newchat} New chat
@@ -173,4 +180,4 @@ function History() {
   );
 }
 
-export default History;
+export default MobileHistory;

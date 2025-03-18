@@ -8,7 +8,7 @@ import Search from "../../pages/Search";
 import Setting from "../../pages/Setting";
 import Chatlist from "../../pages/Chatlist";
 
-function SubSB() {
+function MobileBar({ setWidenNav, widenNav }) {
   const [drop, setDrop] = useState(false);
   const { theme } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ function SubSB() {
   const [addList, setAddlist] = useState(false);
   const [settings, setSettings] = useState(false);
   return (
-    <div className="text-black   h-[100vh] border-2 border-[#141718]  hidden sm:flex  bg-[#141718]  lg:w-fit  sm:w-[96px] p-0 m-0 border-none">
+    <div className="text-black   h-[100vh] border-2 border-[#141718]  sm:hidden flex  bg-[#141718]  w-full p-0 m-0 border-none">
       {search && <Search setSearch={setSearch} />}
       {addList && <Chatlist setAddlist={setAddlist} />}
       {settings && <Setting setSettings={setSettings} />}
@@ -26,7 +26,9 @@ function SubSB() {
         <main>
           {/* header  */}
           <header className=" py-[40px] px-[24px] flex items-center justify-center">
-            <span>{sidebaricons.collapse}</span>
+            <span onClick={() => setWidenNav(!widenNav)}>
+              {sidebaricons.collapse}
+            </span>
           </header>
           {/* navigation  */}
           <div className="py-[16px] lg:border-b-[1px] border-[#232627] text-[#E8ECEFBF]">
@@ -35,13 +37,13 @@ function SubSB() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]  "
-                    : " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]  "
+                    ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]    justify-center  "
+                    : " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]  justify-center   "
                 }>
                 <span>{sidebaricons.chat}</span>{" "}
               </NavLink>
               <div
-                className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer"
+                className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between cursor-pointer"
                 onClick={() => setSearch(true)}>
                 <section className=" flex items-center  gap-[20px]">
                   <span>{sidebaricons.search}</span>
@@ -52,8 +54,8 @@ function SubSB() {
                 to="/subscription"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  justify-center  bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  justify-center  "
                 }>
                 <span>{sidebaricons.manage}</span>
               </NavLink>
@@ -61,22 +63,22 @@ function SubSB() {
                 to="/updates"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  justify-center  bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  justify-center  "
                 }>
                 <span>{sidebaricons.updates}</span>
               </NavLink>
-              <button
+              <Link
                 onClick={() => setSettings(true)}
-                className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] cursor-pointer ">
+                className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  justify-center  cursor-pointer  ">
                 <span>{sidebaricons.setting}</span>
-              </button>
+              </Link>
             </ul>
           </div>
 
           {/* chat  */}
           <div className="lg:mx-[24px] mx-[15px]  ">
-            <h2 className=" text-[14px] text-[#6C7275BF] font-[500] leading-[24px] flex items-center gap-[20px]  py-[12px] px-[20px] ">
+            <h2 className=" text-[14px] text-[#6C7275BF] font-[500] leading-[24px] flex items-center gap-[20px]  py-[12px] px-[20px]  justify-center  ">
               <span
                 onClick={() => setDrop(!drop)}
                 className="  cursor-pointer   flex items-center justify-center text-center pl-[7px]">
@@ -85,29 +87,29 @@ function SubSB() {
             </h2>
             {drop && (
               <section className=" text-[#E8ECEFBF]">
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between">
+                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between">
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box1}</span>
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between bg-gradient-to-r from-[#323337] to-[#464F6F80]">
+                <Link className=" text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between bg-gradient-to-r from-[#323337] to-[#464F6F80]">
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box2}</span>
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between">
+                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between">
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box3}</span>
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between">
+                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between">
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box4}</span>
                   </section>{" "}
                 </Link>
                 <button
                   onClick={() => setAddlist(true)}
-                  className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer">
+                  className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-center   justify-between cursor-pointer">
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.add}</span>
                   </section>{" "}
@@ -139,4 +141,4 @@ function SubSB() {
   );
 }
 
-export default SubSB;
+export default MobileBar;

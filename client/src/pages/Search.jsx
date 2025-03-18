@@ -4,7 +4,7 @@ import { Avatar } from "../assets";
 
 function Search({ setSearch }) {
   return (
-    <div className=" fixed w-full sm:h-[100vh] h-screen left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden ">
+    <div className=" fixed w-full sm:h-[100vh] h-screen left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  ">
       {/* container  */}
       <main className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[600px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[940px] h-full overflow-scroll">
         {/* header  */}

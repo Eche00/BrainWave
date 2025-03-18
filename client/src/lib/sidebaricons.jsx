@@ -412,6 +412,48 @@ const sidebaricons = {
       />
     </svg>
   ),
+  hamburgermenu: (
+    <svg
+      width="20"
+      height="10"
+      viewBox="0 0 20 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 1.5C0 0.947715 0.447715 0.5 1 0.5H19C19.5523 0.5 20 0.947715 20 1.5C20 2.05228 19.5523 2.5 19 2.5H1C0.447715 2.5 0 2.05228 0 1.5Z"
+        fill="black"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 8.5C0 7.94772 0.447715 7.5 1 7.5H19C19.5523 7.5 20 7.94772 20 8.5C20 9.05229 19.5523 9.5 19 9.5H1C0.447715 9.5 0 9.05229 0 8.5Z"
+        fill="black"
+      />
+    </svg>
+  ),
+  hamburgermenudark: (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M2 8.5C2 7.94772 2.44772 7.5 3 7.5H21C21.5523 7.5 22 7.94772 22 8.5C22 9.05228 21.5523 9.5 21 9.5H3C2.44772 9.5 2 9.05228 2 8.5Z"
+        fill="#6C7275"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M2 15.5C2 14.9477 2.44772 14.5 3 14.5H21C21.5523 14.5 22 14.9477 22 15.5C22 16.0523 21.5523 16.5 21 16.5H3C2.44772 16.5 2 16.0523 2 15.5Z"
+        fill="#6C7275"
+      />
+    </svg>
+  ),
 };
 
 export default sidebaricons;

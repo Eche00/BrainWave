@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import Subscription from "./pages/Subscription";
 import Updates from "./pages/Updates";
 import Auth from "./getAuth/Auth";
+import Application from "./pages/Application";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/updates" element={<Updates />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/app" element={<Application />} />
           </Route>
           <Route path="/auth" element={<Auth />} />
           <Route path="/subscription" element={<Subscription />} />

@@ -14,7 +14,7 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
   return (
     <div className="text-black   h-[100vh] border-2 border-[#141718]">
       {/* container  */}
-      <body className=" flex flex-col justify-between w-fit h-full  overflow-scroll">
+      <body className=" flex flex-col justify-between w-fit h-full  overflow-scroll relative">
         <main>
           {/* header  */}
           <header className=" py-[40px] px-[24px] flex items-center justify-between">
@@ -198,7 +198,8 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
           </section>
         </div>
         {/* bottom section 2 */}
-        <div className=" my-[24px] lg:hidden flex-col gap-[24px]   flex items-center justify-center">
+
+        <div className=" my-[24px] lg:hidden flex-col gap-[24px]   flex items-center justify-center sticky bottom-0 left-0 w-full bg-[#141718]">
           <section className=" w-fit relative">
             <img
               className="  rounded-full bg-[#B5E4CA] object-cover"

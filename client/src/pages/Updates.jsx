@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SubUpdates from "./updates&faqs/SubUpdates";
 import SubFaqs from "./updates&faqs/SubFaqs";
+import MobileNavBar from "../components/navigation/MobileNavBar";
 
 function Updates() {
   const [updates, setUpdates] = useState(true);
@@ -19,6 +20,9 @@ function Updates() {
     <div className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718] sm:h-screen   overscroll-none">
       {/* container  */}
       <main className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex flex-col gap-[48px] sm:py-[80px] ">
+        <div className=" sm:hidden flex">
+          <MobileNavBar />
+        </div>
         <div className=" bg-white dark:bg-[#232627] h-fit sm:rounded-[20px] w-full flex flex-col gap-[48px] py-[80px] overflow-scroll">
           {/* head section  */}
           <section className=" flex flex-col gap-[16px]   md:w-[70%] lg:w-[80%] w-[90%] mx-auto">
@@ -55,7 +59,7 @@ function Updates() {
           </section>
 
           {/* category section  */}
-          <section className=" flex xl:w-[80%] lg:w-[95%] w-[90%] mx-auto ">
+          <section className=" flex xl:w-[80%] lg:w-[95%] w-[90%] mx-auto  z-20">
             {updates && <SubUpdates />}
             {Faqs && <SubFaqs />}
           </section>

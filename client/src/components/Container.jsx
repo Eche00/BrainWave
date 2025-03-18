@@ -4,6 +4,7 @@ import Sidebar from "./navigation/Sidebar";
 import Search from "../pages/Search";
 import Chatlist from "../pages/Chatlist";
 import Setting from "../pages/Setting";
+import SubSB from "./navigation/SubSB";
 
 function Container() {
   const [search, setSearch] = useState(false);

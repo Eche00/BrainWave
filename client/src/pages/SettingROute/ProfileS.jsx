@@ -17,7 +17,7 @@ function ProfileS() {
           <div className=" flex  items-center gap-[16px]">
             <img
               src={Avatar}
-              className="w-[112px] h-[112px] rounded-full bg-[#B5E4CA] object-center"
+              className="w-[112px] h-[112px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
             />
 
