@@ -114,7 +114,7 @@ function MobileHistory({ setOpen }) {
                   </p>
 
                   <div className="pt-[8px] flex justify-between items-center">
-                    <div className=" relative h-[30px] w-[50px]">
+                    <div className=" relative h-[30px] w-[50px] ">
                       <img
                         src={Avatar}
                         className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-0 z-0 border-[2px] dark:border-[#232627] border-white"
@@ -169,8 +169,8 @@ function MobileHistory({ setOpen }) {
         </div>
 
         {/* new chat section  */}
-        <section className=" p-[24px] fixed bottom-0  flex items-center justify-center w-[80%]">
-          <button className=" w-full bg-[#0084FF] rounded-[12px] flex items-center justify-center gap-[8px] py-[12px] text-[16px] font-[600] leading-[24px] text-white">
+        <section className=" p-[24px] fixed bottom-0  flex items-center justify-center w-[80%] z-50">
+          <button className=" w-full bg-[#0084FF] rounded-[12px] flex items-center justify-center gap-[8px] py-[12px] text-[16px] font-[600] leading-[24px] text-white z-50">
             {" "}
             {historyicons.newchat} New chat
           </button>
