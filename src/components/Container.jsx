@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./navigation/Sidebar";
 import Search from "../pages/Search";
 import Chatlist from "../pages/Chatlist";
@@ -11,19 +11,24 @@ function Container() {
   const [addList, setAddlist] = useState(false);
   const [settings, setSettings] = useState(false);
 
+  const location = useLocation();
+
   return (
-    <div className=" flex gap-0">
+    <div className=" flex gap-0 overflow-hidden">
       {search && <Search setSearch={setSearch} />}
       {addList && <Chatlist setAddlist={setAddlist} />}
       {settings && <Setting setSettings={setSettings} />}
 
-      <section className=" hidden sm:flex  bg-[#141718] text-white  lg:w-fit  sm:w-[96px] p-0 m-0 border-none">
-        <Sidebar
-          setSearch={setSearch}
-          setAddlist={setAddlist}
-          setSettings={setSettings}
-        />
-      </section>
+      {location.pathname != "/" && (
+        <section className=" hidden sm:flex  bg-[#141718] text-white  lg:w-fit  sm:w-[96px] p-0 m-0 border-none">
+          <Sidebar
+            setSearch={setSearch}
+            setAddlist={setAddlist}
+            setSettings={setSettings}
+          />
+        </section>
+      )}
+
       <section className=" flex flex-1 dark:bg-black bg-white m-0 p-0 border-none">
         <Outlet />
       </section>
