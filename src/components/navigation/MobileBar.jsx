@@ -138,7 +138,7 @@ function MobileBar({ setWidenNav, widenNav }) {
               {widenNav && <p className=" flex sm:hidden">Chat list</p>}
             </h2>
             {drop && (
-              <section className=" text-[#E8ECEFBF] pb-[200px]">
+              <section className=" text-[#E8ECEFBF] pb-[250px]">
                 <Link
                   className={` text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between  ${
                     widenNav ? "justify-start" : " justify-center "
