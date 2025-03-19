@@ -40,7 +40,7 @@ function MobileNavBar() {
           <div
             className={
               widenNav
-                ? " z-30  fixed top-0 right-[-200px] w-[80%] "
+                ? " z-30  fixed top-0 right-[-180px] w-[80%] "
                 : " z-30  fixed top-0 right-0 w-[80%] "
             }>
             <MobileHistory setOpen={setOpen} />
