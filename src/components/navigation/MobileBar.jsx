@@ -255,7 +255,7 @@ function MobileBar({ setWidenNav, widenNav }) {
             </section>
           </div>
         ) : (
-          <div className=" my-[24px]  flex-col gap-[24px]   flex items-center justify-center sticky bottom-0 w-full right-0  bg-[#141718]">
+          <div className=" my-[24px]  flex-col gap-[24px]   flex items-center justify-center sticky bottom-20 w-full right-0  bg-[#141718]">
             {/* bottom section 2 */}
 
             <section className=" w-fit relative">
