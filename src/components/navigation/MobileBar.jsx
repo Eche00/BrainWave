@@ -54,8 +54,12 @@ function MobileBar({ setWidenNav, widenNav }) {
                 to="/home"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]      "
-                    : " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]     "
+                    ? ` text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]  ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }   `
+                    : ` text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]   ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }  `
                 }>
                 <span>{sidebaricons.chat}</span>{" "}
                 {widenNav && <p className=" flex sm:hidden">Chats</p>}
@@ -63,7 +67,10 @@ function MobileBar({ setWidenNav, widenNav }) {
               <div
                 className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]   cursor-pointer"
                 onClick={() => setSearch(true)}>
-                <section className=" flex items-center  gap-[20px] w-full">
+                <section
+                  className={` flex items-center  gap-[20px] w-full ${
+                    widenNav ? "justify-start" : " justify-center "
+                  }`}>
                   <span>{sidebaricons.search}</span>
                   {widenNav && (
                     <p className="  sm:hidden flex items-center justify-between w-full">
@@ -80,8 +87,12 @@ function MobileBar({ setWidenNav, widenNav }) {
                 to="/subscription"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    "
+                    ? ` text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    bg-gradient-to-r from-[#323337] to-[#464F6F80] ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }`
+                    : ` text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }`
                 }>
                 <span>{sidebaricons.manage}</span>
                 {widenNav && (
@@ -92,15 +103,21 @@ function MobileBar({ setWidenNav, widenNav }) {
                 to="/updates"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    "
+                    ? ` text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    bg-gradient-to-r from-[#323337] to-[#464F6F80] ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }`
+                    : ` text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]    ${
+                        widenNav ? "justify-start" : " justify-center "
+                      }`
                 }>
                 <span>{sidebaricons.updates}</span>
                 {widenNav && <p className=" flex sm:hidden">Updates & FAQ</p>}
               </NavLink>
               <Link
                 onClick={() => setSettings(true)}
-                className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]   cursor-pointer  ">
+                className={` text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]   cursor-pointer  ${
+                  widenNav ? "justify-start" : " justify-center "
+                }`}>
                 <span>{sidebaricons.setting}</span>
                 {widenNav && <p className=" flex sm:hidden">Setting</p>}
               </Link>
@@ -109,7 +126,10 @@ function MobileBar({ setWidenNav, widenNav }) {
 
           {/* chat  */}
           <div className="lg:mx-[24px] mx-[15px]  ">
-            <h2 className=" text-[14px] text-[#6C7275BF] font-[500] leading-[24px] flex items-center gap-[20px]  py-[12px] px-[20px]   ">
+            <h2
+              className={` text-[14px] text-[#6C7275BF] font-[500] leading-[24px] flex items-center gap-[20px]  py-[12px] px-[20px]   ${
+                widenNav ? "justify-start" : " justify-center "
+              }`}>
               <span
                 onClick={() => setDrop(!drop)}
                 className="  cursor-pointer   flex items-center justify-center text-center ">
@@ -119,13 +139,19 @@ function MobileBar({ setWidenNav, widenNav }) {
             </h2>
             {drop && (
               <section className=" text-[#E8ECEFBF]">
-                <Link className=" text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between ">
+                <Link
+                  className={` text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between  ${
+                    widenNav ? "justify-start" : " justify-center "
+                  }`}>
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box1}</span>
                     {widenNav && <p className=" flex sm:hidden">Welcome</p>}
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between bg-gradient-to-r from-[#323337] to-[#464F6F80]">
+                <Link
+                  className={` text-[14px] text-white font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between bg-gradient-to-r from-[#323337] to-[#464F6F80] ${
+                    widenNav ? "justify-start" : " justify-center "
+                  }`}>
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box2}</span>
                     {widenNav && (
@@ -133,26 +159,37 @@ function MobileBar({ setWidenNav, widenNav }) {
                     )}
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between">
+                <Link
+                  className={` text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     ${
+                    widenNav ? "justify-between" : " justify-center "
+                  }`}>
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box3}</span>
                     {widenNav && <p className=" flex sm:hidden">Favorites</p>}
                   </section>{" "}
                 </Link>
-                <Link className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between">
+                <Link
+                  className={` text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]     justify-between ${
+                    widenNav ? "justify-start" : " justify-center "
+                  }`}>
                   <section className=" flex items-center  gap-[20px]">
                     <span>{sidebaricons.box4}</span>
                     {widenNav && <p className=" flex sm:hidden">Archived</p>}
                   </section>{" "}
                 </Link>
-                <button
+                <Link
                   onClick={() => setAddlist(true)}
-                  className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  cursor-pointer">
-                  <section className=" flex items-center  gap-[20px]">
+                  className={` text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  cursor-pointer ${
+                    widenNav ? "justify-start" : " justify-center "
+                  }`}>
+                  <section
+                    className={` flex items-center  gap-[20px] ${
+                      widenNav ? "justify-start" : " justify-center "
+                    }`}>
                     <span>{sidebaricons.add}</span>
                     {widenNav && <p className=" flex sm:hidden">New list</p>}
                   </section>{" "}
-                </button>
+                </Link>
               </section>
             )}
           </div>
