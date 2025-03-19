@@ -22,7 +22,7 @@ function MobileBar({ setWidenNav, widenNav }) {
       {addList && <Chatlist setAddlist={setAddlist} />}
       {settings && <Setting setSettings={setSettings} />}
       {/* container  */}
-      <body className=" flex flex-col justify-between w-full h-full  overflow-scroll relative">
+      <body className=" flex flex-col justify-between w-full h-auto  overflow-scroll relative">
         <main className=" w-full">
           {/* header  */}
           <header
