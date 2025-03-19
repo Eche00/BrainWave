@@ -51,7 +51,7 @@ function MobileBar({ setWidenNav, widenNav }) {
           <div className="py-[16px] lg:border-b-[1px] border-[#232627] text-[#E8ECEFBF]">
             <ul className="lg:mx-[24px] mx-[15px]  lg:border-none  border-b-[1px] border-[#80a8b6]  ">
               <NavLink
-                to="/"
+                to="/home"
                 className={({ isActive }) =>
                   isActive
                     ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]      "
@@ -112,8 +112,8 @@ function MobileBar({ setWidenNav, widenNav }) {
             <h2 className=" text-[14px] text-[#6C7275BF] font-[500] leading-[24px] flex items-center gap-[20px]  py-[12px] px-[20px]   ">
               <span
                 onClick={() => setDrop(!drop)}
-                className="  cursor-pointer   flex items-center justify-center text-center pl-[7px]">
-                -
+                className="  cursor-pointer   flex items-center justify-center text-center ">
+                {drop ? sidebaricons.arrrowdropup : sidebaricons.arrrowdropdown}
               </span>
               {widenNav && <p className=" flex sm:hidden">Chat list</p>}
             </h2>
