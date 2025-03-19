@@ -4,7 +4,7 @@ import { Avatar } from "../assets";
 
 function Search({ setSearch }) {
   return (
-    <div className=" fixed w-full sm:h-[100vh] h-screen left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  ">
+    <div className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  ">
       {/* container  */}
       <main className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[600px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[940px] h-full overflow-scroll">
         {/* header  */}
@@ -54,7 +54,7 @@ function Search({ setSearch }) {
           </section>
         </div>
 
-        <section className="flex flex-col sm:h-screen h-fit overflow-hidden">
+        <section className="flex flex-col sm:h-screen h-fit overflow-scroll ">
           {/* today mesages */}
           <section className="flex flex-col sm:px-[20px] px-[8px]">
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] ">
