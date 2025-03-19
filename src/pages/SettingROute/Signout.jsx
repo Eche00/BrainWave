@@ -32,7 +32,7 @@ function Signout() {
           <input
             type="text"
             placeholder="Password"
-            className=" flex-1 outline-none"
+            className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
             onChange={handleChange}
           />
         </span>

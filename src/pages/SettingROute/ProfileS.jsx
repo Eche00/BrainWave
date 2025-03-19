@@ -45,7 +45,7 @@ function ProfileS() {
               <input
                 type="text"
                 placeholder="Username or email"
-                className=" flex-1 outline-none"
+                className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
               />
             </span>
           </div>
@@ -54,7 +54,7 @@ function ProfileS() {
             <p className=" font-[600] dark:text-[#FEFEFE] leading-[24px] text-[#232627]">
               Location
             </p>
-            <p className=" flex items-center gap-[16px] py-[14px] px-[16px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px]">
+            <p className=" flex items-center gap-[16px] py-[14px] px-[16px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px]  dark:text-white">
               {settingsicons.location}
               <span>Sai Gon,Vietnam</span>
             </p>
@@ -73,7 +73,7 @@ function ProfileS() {
               <textarea
                 name=""
                 placeholder="Short bio"
-                className=" flex-1 outline-none"
+                className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
                 id=""
                 cols="30"
                 rows="3"></textarea>

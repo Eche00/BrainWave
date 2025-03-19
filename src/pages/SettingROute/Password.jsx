@@ -18,7 +18,7 @@ function Password() {
             <input
               type="text"
               placeholder="Password"
-              className=" flex-1 outline-none"
+              className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
             />
           </span>
         </div>
@@ -32,7 +32,7 @@ function Password() {
             <input
               type="text"
               placeholder="New password"
-              className=" flex-1 outline-none"
+              className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
             />
           </span>
           <span className="text-[#6C727580] text-[14px] font-[500] leading-[24px]">
@@ -49,7 +49,7 @@ function Password() {
             <input
               type="text"
               placeholder="Confirm new password"
-              className=" flex-1 outline-none"
+              className=" flex-1 outline-none text-black  dark:text-white  placeholder:text-[#6C7275]"
             />
           </span>
           <span className="text-[#6C727580] text-[14px] font-[500] leading-[24px]">
