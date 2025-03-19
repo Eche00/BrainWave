@@ -29,7 +29,7 @@ function Container() {
         </section>
       )}
 
-      <section className=" flex flex-1 dark:bg-black bg-white m-0 p-0 border-none">
+      <section className=" flex flex-1 dark:bg-black bg-white m-0 p-0 border-none sm:h-[100vh]">
         <Outlet />
       </section>
     </div>
