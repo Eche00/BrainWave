@@ -30,7 +30,7 @@ function Auth() {
   };
 
   return (
-    <div className="">
+    <div className=" w-full">
       {/* Container  */}
       <main className=" flex">
         {/* siebar  */}
@@ -42,7 +42,7 @@ function Auth() {
           <div className=" bg-white dark:bg-[#232627] h-full sm:rounded-[20px] w-full flex relative  items-center justify-center">
             {/* exit icon  */}
             <Link
-              to="/"
+              to="/home"
               className=" absolute sm:top-[32px] sm:right-[32px] top-[10px] right-[10px]">
               {authicons.exit}
             </Link>
