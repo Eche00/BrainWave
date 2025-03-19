@@ -11,7 +11,7 @@ function Updates() {
     if (e.target.id === "updates") {
       setUpdates(true);
       setFaq(false);
-    } else {
+    } else if (e.target.id === "faq") {
       setUpdates(false);
       setFaq(true);
     }
@@ -35,7 +35,7 @@ function Updates() {
             </p>
           </section>
           {/* button section  */}
-          <section className=" flex  gap-[12px]   w-[70%] mx-auto items-center">
+          <section className=" flex  gap-[12px]   w-[70%] mx-auto items-center z-10">
             <button
               id="updates"
               onClick={handleSwitch}
