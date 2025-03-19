@@ -7,21 +7,24 @@ import Subscription from "./pages/Subscription";
 import Updates from "./pages/Updates";
 import Auth from "./getAuth/Auth";
 import Application from "./pages/Application";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="">
       {/* defining routes  */}
       <Router>
+        <ScrollToTop />
+
         <Routes>
           {/* router group with sidebar  */}
           <Route element={<Container />}>
-            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/updates" element={<Updates />} />
             <Route path="/search" element={<Search />} />
             <Route path="/app" element={<Application />} />
+            <Route index element={<Auth />} />
           </Route>
-          <Route path="/auth" element={<Auth />} />
           <Route path="/subscription" element={<Subscription />} />
         </Routes>
       </Router>
