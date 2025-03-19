@@ -35,7 +35,7 @@ function Thankyou({ setBilling, setPricing, setThankYou }) {
               Manage subscription
             </button>
             <Link
-              to="/"
+              to="/home"
               className="text-[#FEFEFE] text-[16px] font-[600] leading-[24px] bg-[#0084FF] rounded-[12px] px-[24px] py-[12px]">
               Start new chat
             </Link>

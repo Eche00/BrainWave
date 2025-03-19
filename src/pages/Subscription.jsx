@@ -15,7 +15,9 @@ function Subscription() {
       <SubSB />
 
       <body className=" sm:py-[24px] sm:pr-[24px] bg-[#141718] w-full flex flex-1 border-[1px] border-[#141718] sm:h-screen  overflow-hidden  overscroll-none  flex-col relative">
-        <Link to="/" className=" absolute sm:top-10 sm:right-10 top-5 right-5">
+        <Link
+          to="/home"
+          className=" absolute sm:top-10 sm:right-10 top-5 right-5">
           {subicons.exit}
         </Link>
         {/* container  */}

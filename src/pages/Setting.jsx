@@ -448,8 +448,8 @@ function Setting({ setSettings }) {
               <p
                 className={
                   profile
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                    : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white "
+                    : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] "
                 }
                 id="profile"
                 onClick={handleSwitch}>
@@ -479,7 +479,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   password
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="password"
@@ -510,7 +510,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   notification
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="noti"
@@ -541,7 +541,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   chat
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="chat"
@@ -572,7 +572,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   sessions
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="session"
@@ -603,7 +603,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   applications
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="application"
@@ -634,7 +634,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   team
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="team"
@@ -665,7 +665,7 @@ function Setting({ setSettings }) {
               <p
                 className={
                   appearance
-                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                    ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px] text-black dark:text-white"
                     : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
                 }
                 id="appearance"
