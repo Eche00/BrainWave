@@ -21,7 +21,12 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
             <section className=" lg:flex hidden items-center gap-[8px]  lg:w-[320px]">
               {sidebaricons.logo} <h2 className="">{sidebaricons.webName}</h2>
             </section>
-            <span className=" lg:pl-0 pl-[7px]">{sidebaricons.collapse}</span>
+            <span className="hidden lg:flex pl-0 ">
+              {sidebaricons.collapse}
+            </span>
+            <span className="lg:hidden flex  pl-[7px]">
+              {sidebaricons.collapsesm}
+            </span>
           </header>
           {/* navigation  */}
           <div className="py-[16px] lg:border-b-[1px] border-[#232627] text-[#E8ECEFBF]">

@@ -26,7 +26,7 @@ function SubSB() {
         <main>
           {/* header  */}
           <header className=" py-[40px] px-[24px] flex items-center justify-center">
-            <span>{sidebaricons.collapse}</span>
+            <span>{sidebaricons.collapsesm}</span>
           </header>
           {/* navigation  */}
           <div className="py-[16px] lg:border-b-[1px] border-[#232627] text-[#E8ECEFBF]">
