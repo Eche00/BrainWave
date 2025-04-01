@@ -167,11 +167,13 @@ function Allpaths() {
           )}
         </>
       )}
-      {photo && <Photoedition handleSwitch={handleSwitch} />}
-      {videoGen && <Videogeneration handleSwitch={handleSwitch} />}
-      {education && <Educationfeedback handleSwitch={handleSwitch} />}
-      {codeGen && <Codegeneration handleSwitch={handleSwitch} />}
-      {audiooGen && <Audiogeneration handleSwitch={handleSwitch} />}
+      <div>
+        {photo && <Photoedition handleSwitch={handleSwitch} />}
+        {videoGen && <Videogeneration handleSwitch={handleSwitch} />}
+        {education && <Educationfeedback handleSwitch={handleSwitch} />}
+        {codeGen && <Codegeneration handleSwitch={handleSwitch} />}
+        {audiooGen && <Audiogeneration handleSwitch={handleSwitch} />}
+      </div>
     </div>
   );
 }
