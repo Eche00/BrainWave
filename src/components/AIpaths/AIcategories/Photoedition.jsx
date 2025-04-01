@@ -3,7 +3,8 @@ import React from "react";
 function Photoedition({ handleSwitch }) {
   return (
     <div>
-      Photoedition
+      <div className="  w-full bg-pink-500">hello</div>
+
       <button id="nav" onClick={handleSwitch}>
         exit
       </button>
