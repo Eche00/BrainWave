@@ -53,7 +53,7 @@ function Codegeneration({ handleSwitch }) {
           <div className="w-[800px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] p-[24px] rounded-[20px] pb-[64px]">
             <p className="text-[#141718] dark:text-[#FEFEFE] text-[14px] font-[400] leading-[24px] p-[24px]  rounded-[20px] border-[3px] border-[#F3F5F7] bg-[#FEFEFE] dark:bg-[#34383980] dark:border-transparent flex items-center justify-between w-full">
               I have created a project in your Codepen account{" "}
-              <button className=" py-[8px] px-[24px] bg-[#141718] dark:bg-[#FEFEFE] flex items-center gap-[8px] rounded-[10px] dark:text-[#141718] text-[#FEFEFE]">
+              <button className=" py-[8px] px-[24px] bg-[#141718] dark:bg-[#FEFEFE] flex items-center gap-[8px] rounded-[10px] dark:text-[#141718] text-[#FEFEFE] text-[16px] font-[600] leading-[24px]">
                 View{" "}
                 <span className=" dark:hidden inline-block">
                   {" "}
