@@ -19,6 +19,7 @@ function Allpaths() {
 
   const handleSwitch = (e) => {
     e.preventDefault();
+    console.log(`Switching to ${e.target.id}`);
     if (e.target.id === "nav") {
       setPhoto(false);
       setVideoGen(false);
@@ -68,9 +69,9 @@ function Allpaths() {
     <div className=" flex flex-col justify-between w-full relative">
       {nav && (
         <>
-          <section className="  flex flex-1 flex-col items-center gap-[40px] sm:py-[50px] py-[80px] px-[36px] w-full">
+          <section className="  flex flex-1 flex-col items-center gap-[40px] sm:py-[50px] py-[80px] px-[36px] w-full ">
             {location.pathname != "/subscription" && (
-              <div className="fex flex-col items-center justify-center w-full ">
+              <div className="fex flex-col items-center justify-center w-full">
                 {/* page write up  */}
                 <h1 className=" text-[28px] sm:text-[40px] font-[700] sm:leading-[64px] leading-[40px] text-center">
                   Unlock the power of AI
@@ -81,7 +82,7 @@ function Allpaths() {
               </div>
             )}
             {/* ai categories  */}
-            <div className=" flex flex-col gap-[20px] w-fit sm:pb-0 pb-[100px] z-0">
+            <div className=" flex flex-col gap-[20px] w-fit sm:pb-0 pb-[100px] ">
               {/* photo edition */}
               <section
                 className=" flex items-center  py-[16px] px-[24px] border-[1px] dark:border-[#343839] border-[#E8ECEF] rounded-[12px] gap-[24px] dark:hover:bg-[#141718] hover:shadow-xl dark:hover:border-none group group-hover:text-black cursor-pointer"
@@ -121,9 +122,10 @@ function Allpaths() {
                   </span>
                 </p>
               </section>
+
               {/* code generation */}
               <section
-                className=" flex items-center  py-[16px] px-[24px] border-[1px] dark:border-[#343839] border-[#E8ECEF] rounded-[12px] gap-[24px] dark:hover:bg-[#141718] hover:shadow-xl dark:hover:border-none cursor-pointer group group-hover:text-black "
+                className=" flex items-center  py-[16px] px-[24px] border-[1px] dark:border-[#343839] border-[#E8ECEF] rounded-[12px] gap-[24px] dark:hover:bg-[#141718] hover:shadow-xl dark:hover:border-none cursor-pointer group group-hover:text-black"
                 id="code"
                 onClick={handleSwitch}>
                 {homeicons.codegeneration}
@@ -134,6 +136,7 @@ function Allpaths() {
                   </span>
                 </p>
               </section>
+
               {/* audio generation */}
               <section
                 className=" flex items-center  py-[16px] px-[24px] border-[1px] dark:border-[#343839] border-[#E8ECEF] rounded-[12px] gap-[24px] dark:hover:bg-[#141718] hover:shadow-xl dark:hover:border-none cursor-pointer group group-hover:text-black"
@@ -153,7 +156,7 @@ function Allpaths() {
           {/* input  */}
 
           {location.pathname != "/subscription" && (
-            <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627] sm:rounded-bl-[20px]  border-r-[1px] dark:border-[#343839] border-[#161616]">
+            <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627] sm:rounded-bl-[20px]  border-r-[1px] dark:border-[#343839] border-[#161616] ">
               <div className=" flex items-center p-[12px] gap-[12px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px]">
                 <span>{homeicons.morechat}</span>
                 <input
