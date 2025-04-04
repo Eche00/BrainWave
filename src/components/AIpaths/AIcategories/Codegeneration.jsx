@@ -5,7 +5,7 @@ import { Avatar } from "../../../assets";
 
 function Codegeneration({ handleSwitch }) {
   return (
-    <div className=" relative pb-32 ">
+    <div className=" relative pb-32  border-r-[2px] dark:border-[#343839] border-[#E8ECEF]">
       {/* head section  */}
       <header className="  w-full sm:py-[16px] py-[10px]  px-[40px] flex items-center justify-between bg-[#FEFEFE] dark:bg-[#232627] border-b-[1px] dark:border-[#343839] border-[#E8ECEF] sticky top-0 z-10">
         <h1 className="text-[#141718] dark:text-[#FEFEFE] sm:text-[24px] text-[18px] font-[600] leading-[40px]">
@@ -22,7 +22,7 @@ function Codegeneration({ handleSwitch }) {
         exit
       </button>
       {/* chat container */}
-      <main className="flex flex-col gap-[40px]  md:p-[40px] p-[10px] relative sm:h-auto h-fit   sm:mb-0 mb-32">
+      <main className="flex flex-col gap-[40px]  md:p-[40px] p-[10px] relative sm:h-auto h-fit   sm:pb-0 pb-32 ">
         {/* user message  */}
         <section className=" flex flex-col items-end w-full">
           <div className="max-w-[800px] flex flex-col gap-[5px] relative">
@@ -243,7 +243,7 @@ function Codegeneration({ handleSwitch }) {
         </section>
       </main>
 
-      <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627] sm:rounded-bl-[20px]  border-r-[1px] dark:border-[#343839] border-[#E8ECEF]">
+      <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627] sm:rounded-bl-[20px]  ">
         <div className=" flex items-center p-[12px] gap-[12px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px]">
           <span>{homeicons.morechat}</span>
           <input
