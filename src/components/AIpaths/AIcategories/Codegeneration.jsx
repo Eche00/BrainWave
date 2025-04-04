@@ -50,7 +50,7 @@ function Codegeneration({ handleSwitch }) {
 
         {/* Ai message  */}
         <section className=" flex flex-col items-start w-fit relative  ">
-          <div className="xxs:max-w-[800px] max-w-[330px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] sm:p-[24px] p-[16px] rounded-[20px] pb-[64px]">
+          <div className="xxs:max-w-[800px] max-w-[330px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
             <section className="flex flex-col rounded-[12px]  overflow-hidden w-full ">
               <div className=" bg-[#232627] w-full flex items-center justify-between p-[4px]">
                 <div className=" flex  w-full">
@@ -220,10 +220,10 @@ function Codegeneration({ handleSwitch }) {
               </button>
             </p>
           </div>
-          <span className=" absolute left-5 bottom-[-5px] dark:block hidden ">
+          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
           </span>
-          <span className=" absolute left-5 bottom-[-5px] dark:hidden block ">
+          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
           </span>
           {/* bottom  */}
@@ -235,7 +235,7 @@ function Codegeneration({ handleSwitch }) {
             <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px]">
               Regenerate response
             </button>
-            <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px] flex items-center gap-[4px] sm:inline-block hidden">
+            <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px]  items-center gap-[4px] sm:flex hidden">
               {photoicon.emoji}
               {photoicon.emoji2}
             </button>
