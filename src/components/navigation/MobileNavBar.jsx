@@ -11,7 +11,7 @@ function MobileNavBar() {
     setOpen(!open);
   };
   return (
-    <div className="absolute top-0 left-0  w-full  h-full ">
+    <div className="absolute top-0 left-0  w-full  h-fit ">
       {/* head section  */}
       <header className="  w-full px-[16px] py-[25px]  flex items-end justify-end z-40">
         <button className=" dark:hidden flex" onClick={handleOpen}>
