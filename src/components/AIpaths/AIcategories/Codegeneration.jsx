@@ -18,9 +18,6 @@ function Codegeneration({ handleSwitch }) {
         </div>
       </header>
 
-      <button id="nav" onClick={handleSwitch} className="hidden">
-        exit
-      </button>
       {/* chat container */}
       <main className="flex flex-col gap-[40px]  md:p-[40px] p-[10px] relative sm:h-auto h-fit   sm:pb-0 pb-32 ">
         {/* user message  */}
@@ -55,7 +52,7 @@ function Codegeneration({ handleSwitch }) {
           </div>
 
           <div className="flex w-full items-end justify-end">
-            <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px] w-fit text-[12px] font-[500] flex items-center gap-[8px]">
+            <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px] w-fit text-[12px] font-[500] flex items-center gap-[8px] ">
               <span className="dark:hidden inline-block">
                 {photoicon.pauselight}
               </span>
@@ -74,7 +71,7 @@ function Codegeneration({ handleSwitch }) {
         </section>
         {/* Ai message  */}
         <section className=" flex flex-col items-start w-fit relative  ">
-          <div className="xxs:max-w-[800px] max-w-[330px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
+          <div className="xxs:max-w-[100%] max-w-[330px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
             <section className="flex flex-col rounded-[12px]  overflow-hidden w-full ">
               <div className=" bg-[#232627] w-full flex items-center justify-between p-[4px]">
                 <div className=" flex  w-full">
