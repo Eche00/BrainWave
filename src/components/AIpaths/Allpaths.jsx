@@ -11,7 +11,7 @@ function Allpaths() {
   const location = useLocation();
 
   const [nav, setNav] = useState(true);
-  const [photo, setPhoto] = useState(false);
+  const [photo, setPhoto] = useState(true);
   const [videoGen, setVideoGen] = useState(false);
   const [education, setEducation] = useState(false);
   const [codeGen, setCodeGen] = useState(false);
