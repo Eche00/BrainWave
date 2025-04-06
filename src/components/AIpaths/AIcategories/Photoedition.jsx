@@ -8,24 +8,87 @@ function Photoedition({ handleSwitch }) {
   const [exportii, setExportii] = useState(false);
   const [exportiii, setExportiii] = useState(false);
 
-  const [adjust, setAdjust] = useState(true);
-
   const handleExport = (e) => {
     e.preventDefault();
     if (e.target.id === "exporti") {
       setExport(!exporti);
       setExportii(false);
       setExportiii(false);
+      setAdjust(false);
+      setAdjusti(false);
+      setAdjustii(false);
     } else if (e.target.id === "exportii") {
       setExport(false);
       setExportii(!exportii);
       setExportiii(false);
+      setAdjust(false);
+      setAdjusti(false);
+      setAdjustii(false);
     } else if (e.target.id === "exportiii") {
       setExport(false);
       setExportii(false);
       setExportiii(!exportiii);
+      setAdjust(false);
+      setAdjusti(false);
+      setAdjustii(false);
     }
   };
+
+  // adjustments
+  const [adjust, setAdjust] = useState(false);
+  const [adjusti, setAdjusti] = useState(false);
+  const [adjustii, setAdjustii] = useState(false);
+
+  const handleAdjust = (e) => {
+    e.preventDefault();
+    if (e.target.id === "adjust") {
+      setAdjust(!adjust);
+      setAdjusti(false);
+      setAdjustii(false);
+      setExport(false);
+      setExportii(false);
+      setExportiii(false);
+    } else if (e.target.id === "adjusti") {
+      setAdjust(false);
+      setAdjusti(!adjusti);
+      setAdjustii(false);
+      setExport(false);
+      setExportii(false);
+      setExportiii(false);
+    } else if (e.target.id === "adjustii") {
+      setAdjust(false);
+      setAdjusti(false);
+      setAdjustii(!adjustii);
+      setExport(false);
+      setExportii(false);
+      setExportiii(false);
+    }
+  };
+
+  const sliderLabels = [
+    "Exposure",
+    "Contrast",
+    "Highlights",
+    "Shadows",
+    "White",
+    "Blacks",
+  ];
+
+  const [values, setValues] = useState({
+    Exposure: 0,
+    Contrast: 0,
+    Highlights: 0,
+    Shadows: 0,
+    White: 0,
+    Blacks: 0,
+  });
+  const handleChange = (label, newValue) => {
+    setValues((prev) => ({
+      ...prev,
+      [label]: newValue,
+    }));
+  };
+
   return (
     <div className=" relative pb-32  border-r-[2px] dark:border-[#343839] border-[#E8ECEF]">
       {/* head section  */}
@@ -206,7 +269,10 @@ function Photoedition({ handleSwitch }) {
                   {photoicon.createdark}
                 </span>
               </button>
-              <button className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center relative">
+              <button
+                className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center relative"
+                id="adjust"
+                onClick={handleAdjust}>
                 Adjust
                 <span className=" dark:hidden inline-block">
                   {photoicon.adjust}
@@ -230,7 +296,36 @@ function Photoedition({ handleSwitch }) {
                     />
 
                     {/* adjustment section  */}
-                    <section className="flex flex-col gap-[16px]"></section>
+                    <section className="flex flex-col gap-[16px]">
+                      {sliderLabels.map((label) => (
+                        <div key={label} className="flex flex-col gap-[4px]">
+                          <div className="flex justify-between items-center text-[#141718] dark:text-white text-[11px] font-[500] leading-[16px]">
+                            <span>{label}</span>
+                            <span>
+                              {values[label] > 0
+                                ? `+${values[label]}`
+                                : values[label]}
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="-20"
+                            max="20"
+                            value={values[label]}
+                            onChange={(e) =>
+                              handleChange(label, Number(e.target.value))
+                            }
+                            className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer 
+              [&::-webkit-slider-thumb]:appearance-none 
+              [&::-webkit-slider-thumb]:w-3 
+              [&::-webkit-slider-thumb]:h-3 
+              [&::-webkit-slider-thumb]:rounded-full 
+              [&::-webkit-slider-thumb]:bg-black
+              dark:[&::-webkit-slider-thumb]:bg-white"
+                          />
+                        </div>
+                      ))}
+                    </section>
 
                     {/* buttons  */}
                     <div className=" flex items-center gap-[12px]">
@@ -439,7 +534,10 @@ function Photoedition({ handleSwitch }) {
                   {photoicon.createdark}
                 </span>
               </button>
-              <button className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center">
+              <button
+                className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center relative"
+                id="adjusti"
+                onClick={handleAdjust}>
                 Adjust
                 <span className=" dark:hidden inline-block">
                   {photoicon.adjust}
@@ -447,6 +545,64 @@ function Photoedition({ handleSwitch }) {
                 <span className=" dark:inline-block hidden">
                   {photoicon.adjustdark}
                 </span>
+                {adjusti && (
+                  <div className="absolute bottom-[50px] left-0 w-[312px] bg-[#FEFEFE] dark:bg-[#141718] shadow-md rounded-[12px] p-[16px] flex flex-col gap-[12px]">
+                    <h1 className=" flex items-center justify-between text-[#141718] dark:text-[#FEFEFE] text-[16px] font-[500] leading-[24px]">
+                      Adjust
+                      <span onClick={() => setAdjust(false)}>
+                        {photoicon.exit}
+                      </span>
+                    </h1>
+                    {/* img  */}
+                    <img
+                      src=""
+                      alt="//"
+                      className=" bg-black w-full h-[200px] object-cover rounded-[12px]"
+                    />
+
+                    {/* adjustment section  */}
+                    <section className="flex flex-col gap-[16px]">
+                      {sliderLabels.map((label) => (
+                        <div key={label} className="flex flex-col gap-[4px]">
+                          <div className="flex justify-between items-center text-[#141718] dark:text-white text-[11px] font-[500] leading-[16px]">
+                            <span>{label}</span>
+                            <span>
+                              {values[label] > 0
+                                ? `+${values[label]}`
+                                : values[label]}
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="-20"
+                            max="20"
+                            value={values[label]}
+                            onChange={(e) =>
+                              handleChange(label, Number(e.target.value))
+                            }
+                            className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer 
+              [&::-webkit-slider-thumb]:appearance-none 
+              [&::-webkit-slider-thumb]:w-3 
+              [&::-webkit-slider-thumb]:h-3 
+              [&::-webkit-slider-thumb]:rounded-full 
+              [&::-webkit-slider-thumb]:bg-black
+              dark:[&::-webkit-slider-thumb]:bg-white"
+                          />
+                        </div>
+                      ))}
+                    </section>
+
+                    {/* buttons  */}
+                    <div className=" flex items-center gap-[12px]">
+                      <button className="flex-1 bg-[#0084FF] rounded-[12px] py-[12px] text-[#FEFEFE] text-[16px] font-[600] leading-[24px] cursor-pointer ">
+                        Auto
+                      </button>
+                      <button className="flex-1 border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px] py-[12px] text-[#141718] dark:text-[#FEFEFE] text-[16px] font-[600] leading-[24px] cursor-pointer ">
+                        Reset
+                      </button>
+                    </div>
+                  </div>
+                )}
               </button>
               <button className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center">
                 Enhance
@@ -616,7 +772,10 @@ function Photoedition({ handleSwitch }) {
                   {photoicon.createdark}
                 </span>
               </button>
-              <button className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center">
+              <button
+                className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center relative"
+                id="adjustii"
+                onClick={handleAdjust}>
                 Adjust
                 <span className=" dark:hidden inline-block">
                   {photoicon.adjust}
@@ -624,6 +783,64 @@ function Photoedition({ handleSwitch }) {
                 <span className=" dark:inline-block hidden">
                   {photoicon.adjustdark}
                 </span>
+                {adjustii && (
+                  <div className="absolute bottom-[50px] left-0 w-[312px] bg-[#FEFEFE] dark:bg-[#141718] shadow-md rounded-[12px] p-[16px] flex flex-col gap-[12px]">
+                    <h1 className=" flex items-center justify-between text-[#141718] dark:text-[#FEFEFE] text-[16px] font-[500] leading-[24px]">
+                      Adjust
+                      <span onClick={() => setAdjust(false)}>
+                        {photoicon.exit}
+                      </span>
+                    </h1>
+                    {/* img  */}
+                    <img
+                      src=""
+                      alt="//"
+                      className=" bg-black w-full h-[200px] object-cover rounded-[12px]"
+                    />
+
+                    {/* adjustment section  */}
+                    <section className="flex flex-col gap-[16px]">
+                      {sliderLabels.map((label) => (
+                        <div key={label} className="flex flex-col gap-[4px]">
+                          <div className="flex justify-between items-center text-[#141718] dark:text-white text-[11px] font-[500] leading-[16px]">
+                            <span>{label}</span>
+                            <span>
+                              {values[label] > 0
+                                ? `+${values[label]}`
+                                : values[label]}
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="-20"
+                            max="20"
+                            value={values[label]}
+                            onChange={(e) =>
+                              handleChange(label, Number(e.target.value))
+                            }
+                            className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer 
+              [&::-webkit-slider-thumb]:appearance-none 
+              [&::-webkit-slider-thumb]:w-3 
+              [&::-webkit-slider-thumb]:h-3 
+              [&::-webkit-slider-thumb]:rounded-full 
+              [&::-webkit-slider-thumb]:bg-black
+              dark:[&::-webkit-slider-thumb]:bg-white"
+                          />
+                        </div>
+                      ))}
+                    </section>
+
+                    {/* buttons  */}
+                    <div className=" flex items-center gap-[12px]">
+                      <button className="flex-1 bg-[#0084FF] rounded-[12px] py-[12px] text-[#FEFEFE] text-[16px] font-[600] leading-[24px] cursor-pointer ">
+                        Auto
+                      </button>
+                      <button className="flex-1 border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px] py-[12px] text-[#141718] dark:text-[#FEFEFE] text-[16px] font-[600] leading-[24px] cursor-pointer ">
+                        Reset
+                      </button>
+                    </div>
+                  </div>
+                )}
               </button>
               <button className="bg-[#FEFEFE] dark:bg-[#232627] flex items-center gap-[8px] py-[6px] px-[16px] rounded-[6px] text-[#232627] dark:text-[#FEFEFE]  text-[14px]  font-[600] leading-[24px] shadow-md dark:shadow-none cursor-pointer sm:w-fit flex-1 justify-center">
                 Enhance
