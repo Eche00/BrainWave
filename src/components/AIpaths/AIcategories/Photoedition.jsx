@@ -132,6 +132,30 @@ function Photoedition({ handleSwitch }) {
           </div>
         </section>
 
+        {/* Ai loading  */}
+        <section className="relative flex flex-col gap-2 w-[80%]">
+          <div className="relative">
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+          </div>
+
+          <div className="flex w-full items-end justify-end">
+            <button className=" bg-[#E8ECEF] dark:bg-[#141718] text-[#141718] dark:text-[#FEFEFE] rounded-[6px] py-[2px] px-[8px] w-fit text-[12px] font-[500] flex items-center gap-[8px] ">
+              <span className="dark:hidden inline-block">
+                {photoicon.pauselight}
+              </span>
+              <span className="dark:inline-block hidden">
+                {photoicon.pausedark}
+              </span>
+              Pause generating
+            </button>
+          </div>
+          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+            {photoicon.ailogodark}
+          </span>
+          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+            {photoicon.ailogo}
+          </span>
+        </section>
         {/* Ai message  */}
         <section className=" flex flex-col items-start xxs:w-[80%] w-[330px] relative   ">
           <div className="w-full flex flex-col gap-[24px] relative items-start bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
