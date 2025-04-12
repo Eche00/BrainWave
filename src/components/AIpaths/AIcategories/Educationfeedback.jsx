@@ -26,8 +26,8 @@ function Educationfeedback({ handleSwitch }) {
       <main className="flex flex-col gap-[40px]  md:p-[40px] p-[10px] relative sm:h-auto h-fit   sm:pb-0 pb-32 ">
         {/* user message  */}
         <section className=" flex flex-col items-end w-full">
-          <div className="w-[70%] flex flex-col relative ">
-            <section className=" flex flex-wrap gap-[16px] rounded-t-[20px] border-[3px] border-[#F3F5F7] dark:bg-[#34383980] dark:border-transparent p-[24px] border-b-[0px]">
+          <div className="sm:w-[80%] w-[95%] flex flex-col relative ">
+            <section className=" flex   sm:gap-[16px] gap-[5px] rounded-t-[20px] border-[3px] border-[#F3F5F7] dark:bg-[#34383980] dark:border-transparent sm:p-[24px] p-[10px] border-b-[0px]">
               {/* 1 */}
               <div className="flex flex-col gap-[12px]">
                 <div className=" w-[160px] h-[180px] rounded-[12px] bg-[#F3F5F7] dark:bg-[#343839] p-[24px] relative">
