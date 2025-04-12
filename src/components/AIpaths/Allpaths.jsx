@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { homeicons } from "../../lib/homeicons";
 import { useLocation } from "react-router-dom";
 import Photoedition from "./AIcategories/Photoedition";
@@ -17,6 +17,14 @@ function Allpaths() {
   const [codeGen, setCodeGen] = useState(false);
   const [audiooGen, setAduioGen] = useState(false);
 
+  useEffect(() => {
+    setPhoto(false);
+    setVideoGen(false);
+    setEducation(false);
+    setCodeGen(false);
+    setAduioGen(false);
+    setNav(true);
+  }, []);
   const handleSwitch = (e) => {
     e.preventDefault();
     console.log(`Switching to ${e.target.id}`);
@@ -66,7 +74,7 @@ function Allpaths() {
     }
   };
   return (
-    <div className=" flex flex-col justify-between w-full relative">
+    <div className=" flex flex-col justify-between w-full relative h-[100vh]">
       {nav && (
         <>
           <section className="  flex flex-1 flex-col items-center gap-[40px] sm:py-[50px] py-[80px] px-[36px] w-full ">
@@ -156,7 +164,7 @@ function Allpaths() {
           {/* input  */}
 
           {location.pathname != "/subscription" && (
-            <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627] sm:rounded-bl-[20px]  border-r-[1px] dark:border-[#343839] border-[#E8ECEF] ">
+            <section className=" py-[32px] sm:px-[40px] px-[20px] sm:sticky fixed bottom-0 w-full  bg-white dark:bg-[#232627]  sm:rounded-bl-[20px]">
               <div className=" flex items-center p-[12px] gap-[12px] border-[2px] border-[#E8ECEF] dark:border-[#343839] rounded-[12px]">
                 <span>{homeicons.morechat}</span>
                 <input
