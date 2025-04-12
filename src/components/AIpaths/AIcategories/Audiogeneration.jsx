@@ -222,7 +222,7 @@ function Audiogeneration({ handleSwitch }) {
               customize it or simply download it for use.
             </p>
             {/* AG  */}
-            <section className=" flex  flex-col gap-[8px] w-fit">
+            <section className=" flex  flex-col gap-[8px]  w-full">
               <div className=" dark:flex items-center gap-[12px] bg-[#FEFEFE] dark:bg-[#232627] rounded-[12px] py-[8px] px-[16px] hidden">
                 {photoicon.pausegendark}
                 {photoicon.generation}
