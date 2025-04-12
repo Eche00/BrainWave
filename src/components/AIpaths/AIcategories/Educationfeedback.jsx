@@ -138,7 +138,7 @@ function Educationfeedback({ handleSwitch }) {
                   </p>
                 </div>
                 <button
-                  className="bg-[#141718] dark:bg-[#FEFEFE] flex items-center gap-[8px] py-[12px] px-[24px] rounded-[12px] text-[#FEFEFE] dark:text-[#141718]  text-[16px]  font-[600] leading-[24px] cursor-pointer dark:border-none sm:w-fit w-full"
+                  className="bg-[#141718] dark:bg-[#FEFEFE] flex items-center gap-[8px] py-[12px] px-[24px] rounded-[12px] text-[#FEFEFE] dark:text-[#141718]  text-[16px]  font-[600] leading-[24px] cursor-pointer dark:border-none sm:w-fit w-full justify-center"
                   id="exporti">
                   Download
                   <span className=" dark:hidden inline-block">
@@ -312,16 +312,14 @@ function Educationfeedback({ handleSwitch }) {
         </div>
       </section>
       {video && (
-        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[#141718F2] z-50  flex items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[#141718F2] z-50  flex items-center justify-center overflow-scroll">
           <span
             className=" absolute top-5 right-5 "
             onClick={() => setVideo(false)}>
             {chatlisticons.exit}
           </span>
 
-          <div className="sm:w-full sm:h-full w-[300px]  object-cover">
-            {photoicon.videodisplay}
-          </div>
+          <div className="">{photoicon.videodisplay}</div>
         </div>
       )}
     </div>
