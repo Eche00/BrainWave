@@ -312,14 +312,14 @@ function Educationfeedback({ handleSwitch }) {
         </div>
       </section>
       {video && (
-        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[#141718F2] z-50  flex items-center justify-center overflow-scroll">
+        <div className="fixed top-0 left-0 w-full h-[100vh] bg-[#141718F2] z-50  flex items-center justify-center">
           <span
             className=" absolute top-5 right-5 "
             onClick={() => setVideo(false)}>
             {chatlisticons.exit}
           </span>
 
-          <div className="">{photoicon.videodisplay}</div>
+          <div className="h-[90%]">{photoicon.videodisplay}</div>
         </div>
       )}
     </div>

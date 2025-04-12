@@ -2566,7 +2566,7 @@ export const photoicon = {
   videodisplay: (
     <svg
       width=""
-      height="832"
+      height=""
       viewBox="0 0 1280 832"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
