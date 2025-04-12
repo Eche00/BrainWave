@@ -319,7 +319,7 @@ function Educationfeedback({ handleSwitch }) {
             {chatlisticons.exit}
           </span>
 
-          <div className="w-full">{photoicon.videodisplay}</div>
+          <div className="w-screen">{photoicon.videodisplay}</div>
         </div>
       )}
     </div>
