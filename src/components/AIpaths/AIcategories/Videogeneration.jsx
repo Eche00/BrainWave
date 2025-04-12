@@ -3,10 +3,13 @@ import { photoicon } from "../../../lib/photoicon";
 import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import { settingsicons } from "../../../lib/settingsicons";
+import ScrollToTop from "../../ScrollToTop";
 
 function Videogeneration({ handleSwitch }) {
   return (
-    <div className=" relative pb-32  border-r-[2px] dark:border-[#343839] border-[#E8ECEF]">
+    <div className=" relative pb-32 sm:pb-0 ">
+      <ScrollToTop />
+
       {/* head section  */}
       <header className="  w-full sm:py-[16px] py-[10px]  px-[40px] flex items-center justify-between bg-[#FEFEFE] dark:bg-[#232627] border-b-[1px] dark:border-[#343839] border-[#E8ECEF] sticky top-0 z-10">
         <h1 className="text-[#141718] dark:text-[#FEFEFE] sm:text-[24px] text-[18px] font-[600] leading-[40px]">
