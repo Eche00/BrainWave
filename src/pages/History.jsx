@@ -4,14 +4,14 @@ import { historyicons } from "../lib/historyicons";
 
 function History() {
   return (
-    <div className=" hidden lg:flex lg:w-[55%] xl:w-[40%]  border-l-[1px] dark:border-[#343839] border-[#E8ECEF]">
+    <div className=" hidden lg:flex w-full bg-gray-100 dark:bg-transparent">
       {/* Container  */}
       <main className=" w-full flex flex-col justify-between">
         {/* top 2 sections  */}
         <div>
           {/* header section  */}
 
-          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px]">
+          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px] sticky top-0 bg-white dark:bg-[#232627] ">
             <span>{historyicons.topselect}</span>
             <section className=" w-fit relative">
               <span className=" bg-[#3FDD78] border-[4px] border-[#232627] rounded-full w-[10px] h-[10px] absolute p-[6px] bottom-[-4px] right-[-4px]"></span>
@@ -28,7 +28,7 @@ function History() {
           </header>
 
           {/* chat history section  */}
-          <section className=" p-[24px] flex flex-col gap-[16px]">
+          <section className=" py-[24px] px-[16px] flex flex-col gap-[16px]">
             <div className="flex items-center justify-between px-[12px]">
               <p className=" flex gap-[12px] m-0 items-center text-[#6C7275BF]  text-[14px] font-[600] leading-[24px]">
                 Chat history{" "}
