@@ -13,7 +13,7 @@ function Audiogeneration({ handleSwitch }) {
       {/* head section  */}
       <header className="  w-full sm:py-[16px] py-[10px]  px-[40px] flex items-center justify-between bg-[#FEFEFE] dark:bg-[#232627] border-b-[1px] dark:border-[#343839] border-[#E8ECEF] sticky top-0 z-10">
         <h1 className="text-[#141718] dark:text-[#FEFEFE] sm:text-[24px] text-[18px] font-[600] leading-[40px]">
-          Photo retouching
+          Hello
         </h1>
         <div className="flex items-center gap-[24px]">
           <span className=" sm:inline-block hidden">{photoicon.staricon}</span>
