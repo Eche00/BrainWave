@@ -96,8 +96,8 @@ function Videogeneration({ handleSwitch }) {
                 alt="//"
                 className=" bg-black h-[325px]  xl:w-[80%] w-full rounded-[12px] object-cover"
               />
-              <div className=" flex items-center gap-[8px] absolute top-5 xl:right-[150px] right-[20px] w-fit ">
-                <p className=" bg-[#FEFEFE] rounded-[8px] py-[6px] px-[10px] shadow-md  w-fit">
+              <div className=" flex items-center gap-[8px] absolute top-5  xl:right-[170px] lg:right-[150px] right-[20px] w-fit ">
+                <p className=" bg-[#FEFEFE] rounded-[8px] py-[6px] px-[10px] shadow-md  w-fit text-[#232627]">
                   {" "}
                   16:9
                 </p>
