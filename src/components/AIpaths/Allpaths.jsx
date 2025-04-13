@@ -6,16 +6,31 @@ import Audiogeneration from "./AIcategories/Audiogeneration";
 import Codegeneration from "./AIcategories/Codegeneration";
 import Educationfeedback from "./AIcategories/Educationfeedback";
 import Videogeneration from "./AIcategories/Videogeneration";
+import MobileBar from "../navigation/MobileBar";
+import ScrollToTop from "../ScrollToTop";
 
-function Allpaths() {
+function Allpaths({
+  nav,
+  setNav,
+  photo,
+  setPhoto,
+  videoGen,
+  setVideoGen,
+  education,
+  setEducation,
+  codeGen,
+  setCodeGen,
+  audiooGen,
+  setAduioGen,
+}) {
   const location = useLocation();
 
-  const [nav, setNav] = useState(true);
-  const [photo, setPhoto] = useState(true);
-  const [videoGen, setVideoGen] = useState(false);
-  const [education, setEducation] = useState(false);
-  const [codeGen, setCodeGen] = useState(false);
-  const [audiooGen, setAduioGen] = useState(false);
+  // const [nav, setNav] = useState(true);
+  // const [photo, setPhoto] = useState(true);
+  // const [videoGen, setVideoGen] = useState(false);
+  // const [education, setEducation] = useState(false);
+  // const [codeGen, setCodeGen] = useState(false);
+  // const [audiooGen, setAduioGen] = useState(false);
 
   useEffect(() => {
     setPhoto(false);
@@ -24,7 +39,8 @@ function Allpaths() {
     setCodeGen(false);
     setAduioGen(false);
     setNav(true);
-  }, []);
+  }, [location.pathname]);
+
   const handleSwitch = (e) => {
     e.preventDefault();
     console.log(`Switching to ${e.target.id}`);
@@ -75,6 +91,7 @@ function Allpaths() {
   };
   return (
     <div className=" flex flex-col justify-between w-full relative h-[100vh]">
+      <ScrollToTop />
       {nav && (
         <>
           <section className="  flex flex-1 flex-col items-center gap-[40px] sm:py-[50px] py-[80px] px-[36px] w-full ">
@@ -184,6 +201,9 @@ function Allpaths() {
         {education && <Educationfeedback handleSwitch={handleSwitch} />}
         {codeGen && <Codegeneration handleSwitch={handleSwitch} />}
         {audiooGen && <Audiogeneration handleSwitch={handleSwitch} />}
+        {/* <span className=" hidden">
+          <MobileBar handleNavOpen={handleNavOpen} />
+        </span> */}
       </div>
     </div>
   );
