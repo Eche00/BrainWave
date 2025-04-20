@@ -10,6 +10,7 @@ import Password from "./SettingROute/Password";
 import Notification from "./SettingROute/Notification";
 import Appearance from "./SettingROute/Appearance";
 import Signout from "./SettingROute/Signout";
+import { motion } from "framer-motion";
 
 function Setting({ setSettings }) {
   const [profile, setProfile] = useState(true);
@@ -26,6 +27,17 @@ function Setting({ setSettings }) {
   const [nav, setNav] = useState(false);
   const [navIcon, setNavIcon] = useState();
   const [navIconDark, setNavIconDark] = useState();
+
+  const handleClose = (e) => {
+    e.preventDefault();
+
+    if (e.target.id === "hello") {
+      return;
+    }
+    if (e.target.id === "close") {
+      setSettings(false);
+    }
+  };
 
   const handleSwitch = (e) => {
     if (e.target.id === "profile") {
@@ -154,22 +166,32 @@ function Setting({ setSettings }) {
     setNavIconDark(settingsicons.profileactivedark);
   }, []);
   return (
-    <div className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden ">
+    <div
+      className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden "
+      onClick={handleClose}
+      id="close">
       {/* container  */}
-      <main className=" bg-[#FEFEFE] dark:bg-[#141718] w-full  sm:w-fit  sm:rounded-[24px] flex  overflow-y-scroll   sm:max-h-[896px] max-h-full overflow-scroll p-[48px]  justify-between gap-[48px] sm:flex-row flex-col relative">
+      <motion.main
+        initial={{ opacity: 0.9, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0 }}
+        viewport={{ once: true }}
+        className=" bg-[#FEFEFE] dark:bg-[#141718] w-full  sm:w-fit  sm:rounded-[24px] flex  overflow-y-scroll   sm:max-h-[896px] max-h-full overflow-scroll p-[48px]  justify-between gap-[48px] sm:flex-row flex-col relative"
+        onClick={() => setSettings(true)}
+        id="hello">
         <button
           className="  p-[20px] sm:hidden flex absolute top-0  right-0"
           onClick={() => setSettings(false)}>
           {settingsicons.exit}
         </button>
-        {/* navbarsection  */}
+        {/*desktop navbarsection  */}
         <section className="w-[212px] sm:flex flex-col hidden">
           {/* 1  */}
           <p
             className={
               profile
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="profile"
             onClick={handleSwitch}>
@@ -199,8 +221,8 @@ function Setting({ setSettings }) {
           <p
             className={
               password
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="password"
             onClick={handleSwitch}>
@@ -230,8 +252,8 @@ function Setting({ setSettings }) {
           <p
             className={
               notification
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="noti"
             onClick={handleSwitch}>
@@ -261,8 +283,8 @@ function Setting({ setSettings }) {
           <p
             className={
               chat
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="chat"
             onClick={handleSwitch}>
@@ -292,8 +314,8 @@ function Setting({ setSettings }) {
           <p
             className={
               sessions
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="session"
             onClick={handleSwitch}>
@@ -323,8 +345,8 @@ function Setting({ setSettings }) {
           <p
             className={
               applications
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="application"
             onClick={handleSwitch}>
@@ -354,8 +376,8 @@ function Setting({ setSettings }) {
           <p
             className={
               team
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="team"
             onClick={handleSwitch}>
@@ -385,8 +407,8 @@ function Setting({ setSettings }) {
           <p
             className={
               appearance
-                ? "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
             }
             id="appearance"
             onClick={handleSwitch}>
@@ -720,7 +742,7 @@ function Setting({ setSettings }) {
           {appearance && <Appearance />}
           {signout && <Signout />}
         </section>
-      </main>
+      </motion.main>
     </div>
   );
 }
