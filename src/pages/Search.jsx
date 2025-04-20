@@ -1,14 +1,35 @@
 import React from "react";
 import { searchicon } from "../lib/searchicon";
 import { Avatar } from "../assets";
+import { motion } from "framer-motion";
 
 function Search({ setSearch }) {
+  const handleClose = (e) => {
+    e.preventDefault();
+
+    if (e.target.id === "hello") {
+      return;
+    }
+    if (e.target.id === "close") {
+      setSearch(false);
+    }
+  };
   return (
-    <div className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  ">
+    <div
+      className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  "
+      onClick={handleClose}
+      id="close">
       {/* container  */}
-      <main className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[600px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[940px] h-full overflow-scroll">
+      <motion.main
+        initial={{ opacity: 0.9, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0 }}
+        viewport={{ once: true }}
+        className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[600px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[940px] h-full overflow-scroll">
         {/* header  */}
-        <section className=" border-b-[1px] border-[#E8ECEF] dark:border-[#232627] sm:sm:py-[20px]  py-[16px] sm:px-[40px] px-[16px] gap-[24px] flex items-center">
+        <section
+          className=" border-b-[1px] border-[#E8ECEF] dark:border-[#232627] sm:sm:py-[20px]  py-[16px] sm:px-[40px] px-[16px] gap-[24px] flex items-center"
+          onClick={() => setSearch(true)}>
           <span className="sm:flex hidden">{searchicon.searchTop}</span>
           <div className="flex sm:hidden" onClick={() => setSearch(false)}>
             <spn className="dark:hidden flex">{searchicon.exitlight}</spn>
@@ -21,7 +42,10 @@ function Search({ setSearch }) {
           />
         </section>
         {/* search category  */}
-        <div className=" sm:max-w-[600px] w-screen overflow-scroll">
+        <div
+          className=" sm:max-w-[600px] w-screen overflow-scroll"
+          onClick={handleClose}
+          id="hello">
           <section className="py-[20px] sm:px-[40px] px-[16px]  sm:gap-[24px] gap-[12px] flex items-center">
             {/* 1 */}
             <div className="border-[1px] border-[#6C727540]  rounded-full focus-within:border-[#0084FF] focus-within:border-[2px]  flex items-center py-[12px] px-[16px] gap-[12px] w-[165px]">
@@ -69,7 +93,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -106,7 +134,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -145,7 +177,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -184,7 +220,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -222,7 +262,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -269,7 +313,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -307,7 +355,11 @@ function Search({ setSearch }) {
             <div className="flex items-center gap-[20px] sm:py-[20px] py-[12px] sm:px-[20px] px-[8px] group hover:bg-[#E8ECEF80] dark:hover:bg-[#232627] rounded-[12px] cursor-pointer">
               {/* space */}
               <section className=" w-fit relative">
-                <img
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.25, duration: 1 }}
+                  viewport={{ once: true }}
                   className="  rounded-full bg-[#B5E4CA] object-cover"
                   src={Avatar}
                   alt=""
@@ -343,7 +395,7 @@ function Search({ setSearch }) {
             </div>
           </section>
         </section>
-      </main>
+      </motion.main>
     </div>
   );
 }
