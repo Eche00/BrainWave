@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import sidebaricons from "../../lib/sidebaricons";
 import { Avatar } from "../../assets";
 import Search from "../../pages/Search";
+import { motion } from "framer-motion";
 
 function Sidebar({ setSearch, setAddlist, setSettings }) {
   const [drop, setDrop] = useState(false);
@@ -18,9 +19,14 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
         <main>
           {/* header  */}
           <header className=" py-[40px] px-[24px] flex items-center justify-between">
-            <section className=" lg:flex hidden items-center gap-[8px]  lg:w-[320px]">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
+              className=" lg:flex hidden items-center gap-[8px]  lg:w-[320px]">
               {sidebaricons.logo} <h2 className="">{sidebaricons.webName}</h2>
-            </section>
+            </motion.section>
             <span className="hidden lg:flex pl-0 ">
               {sidebaricons.collapse}
             </span>
@@ -36,17 +42,17 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
                 className={({ isActive }) =>
                   isActive
                     ? " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] bg-gradient-to-r from-[#323337] to-[#464F6F80] py-[12px] px-[20px]  "
-                    : " text-[14px] text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]  "
+                    : " text-[14px] hover:text-white font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px] py-[12px] px-[20px]  "
                 }>
                 <span>{sidebaricons.chat}</span>{" "}
                 <p className=" lg:flex hidden">Chats</p>
               </NavLink>
               <div
-                className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer"
+                className=" text-[14px]  font-[600] leading-[24px] flex items-center  rounded-[8px]  py-[12px] px-[20px]  justify-between cursor-pointer hover:text-white"
                 onClick={() => setSearch(true)}>
                 <section className=" flex items-center  gap-[20px]">
                   <span>{sidebaricons.search}</span>
-                  <p className=" lg:flex hidden">Search</p>
+                  <p className=" lg:flex hidden hover:text-white">Search</p>
                 </section>{" "}
                 <span className=" lg:flex hidden">{sidebaricons.search2}</span>
               </div>
@@ -55,8 +61,8 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
                 to="/subscription"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                    ? " text-[14px] text-white  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px] hover:text-white  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
                 }>
                 <span>{sidebaricons.manage}</span>
                 <p className=" lg:flex hidden">Manage subscription</p>
@@ -65,8 +71,8 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
                 to="/updates"
                 className={({ isActive }) =>
                   isActive
-                    ? " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
-                    : " text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
+                    ? " text-[14px] text-white  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] bg-gradient-to-r from-[#323337] to-[#464F6F80] "
+                    : " text-[14px] hover:text-white  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px] "
                 }>
                 <span>{sidebaricons.updates}</span>
                 <p className=" lg:flex hidden">Updates & FAQ</p>
@@ -75,7 +81,7 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
                 onClick={() => setSettings(true)}
                 className=" text-[14px]  font-[600] leading-[24px] flex items-center gap-[20px] rounded-[8px]  py-[12px] px-[20px]  cursor-pointer">
                 <span>{sidebaricons.setting}</span>
-                <p className=" lg:flex hidden">Setting</p>
+                <p className=" lg:flex hidden hover:text-white">Setting</p>
               </div>
             </ul>
           </div>
@@ -201,7 +207,11 @@ function Sidebar({ setSearch, setAddlist, setSettings }) {
 
         <div className=" my-[24px] lg:hidden flex-col gap-[24px]   flex items-center justify-center sticky bottom-0 left-0 w-full bg-[#141718]">
           <section className=" w-fit relative">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.45, duration: 1 }}
+              viewport={{ once: true }}
               className="  rounded-full bg-[#B5E4CA] object-cover"
               src={Avatar}
               alt=""
