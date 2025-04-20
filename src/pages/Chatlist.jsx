@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { chatlisticons } from "../lib/chatlisticons";
 import { Avatar } from "../assets";
+import { motion } from "framer-motion";
 
 function Chatlist({ setAddlist }) {
   const [access, setAccess] = useState("Full access");
@@ -57,7 +58,12 @@ function Chatlist({ setAddlist }) {
   return (
     <div className=" fixed w-full sm:h-[100vh] h-screen left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden ">
       {/* container  */}
-      <main className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[640px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[628px] h-full overflow-scroll relative">
+      <motion.main
+        initial={{ opacity: 0.9, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, delay: 0 }}
+        viewport={{ once: true }}
+        className=" bg-[#FEFEFE] dark:bg-[#141718] sm:w-[640px] w-full  sm:rounded-[24px] flex flex-col overflow-y-scroll   sm:max-h-[628px] h-full overflow-scroll relative">
         <span
           onClick={() => setAddlist(false)}
           className=" absolute top-5 right-5 cursor-pointer">
@@ -301,7 +307,7 @@ function Chatlist({ setAddlist }) {
             </button>
           </section>
         </section>
-      </main>
+      </motion.main>
     </div>
   );
 }
