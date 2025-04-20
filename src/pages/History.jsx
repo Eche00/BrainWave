@@ -1,19 +1,25 @@
 import React from "react";
 import { Avatar, HistoryDummy } from "../assets";
 import { historyicons } from "../lib/historyicons";
+import { motion } from "framer-motion";
 
 function History() {
   return (
-    <div className=" hidden lg:flex w-full bg-gray-100 dark:bg-transparent">
+    <div className=" hidden lg:flex w-full">
       {/* Container  */}
-      <main className=" w-full flex flex-col justify-between">
+      <main className=" w-full flex flex-col justify-between ">
         {/* top 2 sections  */}
         <div>
           {/* header section  */}
 
-          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px] sticky top-0 bg-white dark:bg-[#232627] ">
+          <header className=" border-b-[1px] dark:border-[#343839] border-[#E8ECEF] w-full py-[16px] flex items-center justify-center gap-[32px] sticky top-0  ">
             <span>{historyicons.topselect}</span>
-            <section className=" w-fit relative">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.45, duration: 1 }}
+              viewport={{ once: true }}
+              className=" w-fit relative">
               <span className=" bg-[#3FDD78] border-[4px] border-[#232627] rounded-full w-[10px] h-[10px] absolute p-[6px] bottom-[-4px] right-[-4px]"></span>
 
               <img
@@ -21,7 +27,7 @@ function History() {
                 src={Avatar}
                 alt=""
               />
-            </section>
+            </motion.section>
             <button className=" py-[8px] px-[24px] bg-[#141718] dark:bg-[#FEFEFE] text-[#FEFEFE] dark:text-[#141718] rounded-[12px] text-[16px] font-[600] leading-[24px]">
               Share
             </button>
@@ -42,7 +48,7 @@ function History() {
             {/* history messages  */}
             <div className="flex flex-col gap-[8px]">
               {/* message 1  */}
-              <div className="p-[12px] flex gap-[8px] items-start dark:bg-[#343839] rounded-[12px]">
+              <div className="p-[12px] flex gap-[8px] items-start hover:dark:bg-[#343839]  cursor-pointer rounded-[12px]">
                 <section className="">{historyicons.check}</section>
                 <section className="">
                   <p className=" text-[16px] font-[600] leading-[24px] ">
@@ -53,7 +59,11 @@ function History() {
                   </p>
 
                   <div className="pt-[8px] flex justify-between items-center">
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.45, duration: 1 }}
+                      viewport={{ once: true }}
                       src={Avatar}
                       className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
                       alt=""
@@ -76,13 +86,21 @@ function History() {
                   <p className=" text-[12px] font-[500] leading-[20px] text-[#6C7275]">
                     Write code (HTML, CSS and JS) for a simple
                   </p>
-                  <img
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.45, duration: 1 }}
+                    viewport={{ once: true }}
                     src={HistoryDummy}
                     className=" w-full h-[168px] object-cover rounded-[12px] my-[8px]"
                     alt=""
                   />
                   <div className="pt-[8px] flex justify-between items-center">
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.45, duration: 1 }}
+                      viewport={{ once: true }}
                       src={Avatar}
                       className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
                       alt=""
@@ -108,19 +126,31 @@ function History() {
 
                   <div className="pt-[8px] flex justify-between items-center">
                     <div className=" relative h-[30px] w-[50px]">
-                      <img
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.45, duration: 1 }}
+                        viewport={{ once: true }}
                         src={Avatar}
                         className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-0 z-0 border-[2px] dark:border-[#232627] border-white"
                         alt=""
                       />
 
-                      <img
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.45, duration: 1 }}
+                        viewport={{ once: true }}
                         src={Avatar}
                         className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-[20px] z-10  border-[2px] dark:border-[#232627] border-white"
                         alt=""
                       />
 
-                      <img
+                      <motion.img
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.45, duration: 1 }}
+                        viewport={{ once: true }}
                         src={Avatar}
                         className=" h-[30px] w-[30px] object-cover rounded-full bg-[#B5E4CA] absolute left-[40px] z-30 border-[2px] dark:border-[#232627] border-white"
                         alt=""
@@ -145,7 +175,11 @@ function History() {
                   </p>
 
                   <div className="pt-[8px] flex justify-between items-center">
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.45, duration: 1 }}
+                      viewport={{ once: true }}
                       src={Avatar}
                       className=" h-[28px] w-[28px] object-cover rounded-full bg-[#B5E4CA]"
                       alt=""
@@ -162,7 +196,7 @@ function History() {
         </div>
 
         {/* new chat section  */}
-        <section className=" p-[24px]">
+        <section className=" p-[24px] ">
           <button className=" w-full bg-[#0084FF] rounded-[12px] flex items-center justify-center gap-[8px] py-[12px] text-[16px] font-[600] leading-[24px] text-white">
             {" "}
             {historyicons.newchat} New chat
