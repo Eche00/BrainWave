@@ -7,6 +7,7 @@ import { Avatar } from "../../assets";
 import Search from "../../pages/Search";
 import Setting from "../../pages/Setting";
 import Chatlist from "../../pages/Chatlist";
+import { motion } from "framer-motion";
 
 function SubSB() {
   const [drop, setDrop] = useState(false);
@@ -120,7 +121,11 @@ function SubSB() {
         {/* bottom section 2 */}
         <div className=" my-[24px]  flex-col gap-[24px]   flex items-center justify-center sticky bottom-0 w-full right-0  bg-[#141718]">
           <section className=" w-fit relative">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.45, duration: 1 }}
+              viewport={{ once: true }}
               className="  rounded-full bg-[#B5E4CA] object-cover"
               src={Avatar}
               alt=""
