@@ -1,6 +1,7 @@
 import React from "react";
 import { updateicons } from "../../lib/updatesicons";
 import { Avatar, updatesDummy } from "../../assets";
+import { motion } from "framer-motion";
 
 function SubUpdates() {
   return (
@@ -20,7 +21,12 @@ function SubUpdates() {
             </p>
           </div>
           {/* 2 */}
-          <div className="flex flex-col gap-[32px]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.45, duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-[32px]">
             <div className=" relative   overflow-hidden md:w-fit w-full rounded-[24px]">
               <img
                 src={updatesDummy}
@@ -98,7 +104,11 @@ function SubUpdates() {
                     </p>
                     <section className=" hidden sm:flex items-center justify-between">
                       <div className=" flex gap-[9px] items-center">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: 0.45, duration: 1 }}
+                          viewport={{ once: true }}
                           src={Avatar}
                           className=" rounded-full w-[24px] h-[24px] bg-[#B5E4CA]"
                           alt=""
@@ -121,7 +131,7 @@ function SubUpdates() {
               nuances of human language and conversations, leading to more
               accurate and relevant responses.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* each section  */}
@@ -137,7 +147,12 @@ function SubUpdates() {
             </p>
           </div>
           {/* 2 */}
-          <div className="flex flex-col gap-[32px]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.45, duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-[32px]">
             <div className=" relative   overflow-hidden md:w-fit w-full rounded-[24px]">
               <img
                 src={updatesDummy}
@@ -215,7 +230,11 @@ function SubUpdates() {
                     </p>
                     <section className=" hidden sm:flex items-center justify-between">
                       <div className=" flex gap-[9px] items-center">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: 0.45, duration: 1 }}
+                          viewport={{ once: true }}
                           src={Avatar}
                           className=" rounded-full w-[24px] h-[24px] bg-[#B5E4CA]"
                           alt=""
@@ -239,7 +258,7 @@ function SubUpdates() {
               nuances of human language and conversations, leading to more
               accurate and relevant responses.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* each section  */}
@@ -255,7 +274,12 @@ function SubUpdates() {
             </p>
           </div>
           {/* 2 */}
-          <div className=" flex flex-col gap-[32px]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.45, duration: 1 }}
+            viewport={{ once: true }}
+            className=" flex flex-col gap-[32px]">
             <div className=" relative   overflow-hidden md:w-fit w-full rounded-[24px] border-none">
               <div className=" bg-transparent border-none  object-cover md:w-[600px] sm:w-full w-full lg:h-[528px] md:h-[504px] sm:h-[528px] h-[318px]  rounded-[24px] " />
               {/* updaate  */}
@@ -329,7 +353,11 @@ function SubUpdates() {
                     </p>
                     <section className=" hidden sm:flex items-center justify-between">
                       <div className=" flex gap-[9px] items-center">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: 0.45, duration: 1 }}
+                          viewport={{ once: true }}
                           src={Avatar}
                           className=" rounded-full w-[24px] h-[24px] bg-[#B5E4CA]"
                           alt=""
@@ -352,7 +380,7 @@ function SubUpdates() {
               nuances of human language and conversations, leading to more
               accurate and relevant responses.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* each section  */}
@@ -368,7 +396,12 @@ function SubUpdates() {
             </p>
           </div>
           {/* 2 */}
-          <div className="flex flex-col gap-[32px]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.45, duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-[32px]">
             <div className=" relative   overflow-hidden md:w-fit w-full rounded-[24px]">
               <img
                 src={updatesDummy}
@@ -446,7 +479,11 @@ function SubUpdates() {
                     </p>
                     <section className=" hidden sm:flex items-center justify-between">
                       <div className=" flex gap-[9px] items-center">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: 0.45, duration: 1 }}
+                          viewport={{ once: true }}
                           src={Avatar}
                           className=" rounded-full w-[24px] h-[24px] bg-[#B5E4CA]"
                           alt=""
@@ -470,7 +507,7 @@ function SubUpdates() {
               nuances of human language and conversations, leading to more
               accurate and relevant responses.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         <div className="w-full flex items-center justify-center">
