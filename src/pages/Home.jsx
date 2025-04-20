@@ -51,7 +51,7 @@ function Home() {
           />
         </div>
         {/* chat history  */}
-        <div className=" lg:w-[45%] xl:w-[32%]  overflow-y-scroll">
+        <div className=" lg:w-[45%] xl:w-[32%]  overflow-y-scroll bg-gray-100 dark:bg-transparent">
           {location.pathname != "/subscription" && <History />}
         </div>
       </main>
