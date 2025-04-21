@@ -1,5 +1,6 @@
 import React from "react";
 import { settingsicons } from "../../lib/settingsicons";
+import { motion } from "framer-motion";
 
 function Session() {
   return (
@@ -21,7 +22,13 @@ function Session() {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.chrome}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.chrome}
+              </motion.span>
               <h2 className="flex flex-col gap-[4px] font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Chrome on iPhone
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -37,7 +44,13 @@ function Session() {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.chrome}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.chrome}
+              </motion.span>
               <h2 className="flex flex-col gap-[4px] font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Chrome on Macbook Pro
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -53,7 +66,13 @@ function Session() {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.safari}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.safari}
+              </motion.span>
               <h2 className="flex flex-col gap-[4px] font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Safari on Macbook Pro
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
