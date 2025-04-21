@@ -1,6 +1,7 @@
 import React from "react";
 import { settingsicons } from "../../lib/settingsicons";
 import { Avatar } from "../../assets";
+import { motion } from "framer-motion";
 
 function Team() {
   return (
@@ -19,7 +20,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -40,7 +45,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839] items-center">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -57,7 +66,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -73,7 +86,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -89,7 +106,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -105,7 +126,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
@@ -121,7 +146,11 @@ function Team() {
         {/* each  */}
         <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
           <div className="flex gap-[16px] items-start">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[48px] h-[48px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
