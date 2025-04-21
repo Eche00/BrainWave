@@ -1,6 +1,7 @@
 import React from "react";
 import { settingsicons } from "../lib/settingsicons";
 import MobileNavBar from "../components/navigation/MobileNavBar";
+import { motion } from "framer-motion";
 
 function Application() {
   return (
@@ -40,7 +41,13 @@ function Application() {
               {/* each 1  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.u18}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.u18}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     UI8
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -55,7 +62,13 @@ function Application() {
               {/* each 2  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.slack}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.slack}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Slack
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -70,7 +83,13 @@ function Application() {
               {/* each 3  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.u18}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.u18}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Open AI
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -85,7 +104,13 @@ function Application() {
               {/* each 4  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.mid}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.mid}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Midjourney
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -100,7 +125,13 @@ function Application() {
               {/* each 5  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.dualingo}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.dualingo}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Duolingo
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -115,7 +146,13 @@ function Application() {
               {/* each 6  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.discord}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.discord}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Discord
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -130,7 +167,13 @@ function Application() {
               {/* each 7  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.u18}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.u18}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Peeps
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -145,7 +188,13 @@ function Application() {
               {/* each 8  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.u18}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.u18}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     Sapiens
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -160,7 +209,13 @@ function Application() {
               {/* each 9  */}
               <div className="flex gap-[20px] flex-col p-[20px] w-[338px]">
                 <article className="flex gap-[16px] items-start">
-                  <span>{settingsicons.u18}</span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.25, duration: 1 }}
+                    viewport={{ once: true }}>
+                    {settingsicons.u18}
+                  </motion.span>
                   <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                     App name
                     <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
