@@ -1,13 +1,14 @@
 import React from "react";
 import { settingsicons } from "../../lib/settingsicons";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-function Applications({ setSettings }) {
+function Applications({ setSettings, handleClose }) {
   const navigate = useNavigate();
   const handleExit = (e) => {
     e.preventDefault();
     setSettings(false);
-    navigate("/app");
+    navigate("/app").then(handleClose());
   };
   return (
     <div className="sm:w-[400px] w-full flex flex-col gap-[32px] sm:h-fit h-screen">
@@ -15,6 +16,7 @@ function Applications({ setSettings }) {
         Applications
         <button
           onClick={handleExit}
+          id="close"
           className=" font-[600] text-[#FEFEFE] text-[16px] leading-[24px] bg-[#0084FF] rounded-[12px] py-[12px] px-[24px] w-fit cursor-pointer">
           Add apps
         </button>
@@ -28,7 +30,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.u18}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.u18}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 UI8
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -40,7 +48,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.mid}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.mid}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Midjourney
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -55,7 +69,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.openai}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.openai}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Open AI
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -67,7 +87,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.discord}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.discord}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Discord
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -79,7 +105,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.slack}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.slack}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Slack
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
@@ -91,7 +123,13 @@ function Applications({ setSettings }) {
           {/* each  */}
           <section className=" flex  py-[24px] justify-between border-t-[1px] border-[#E8ECEF] dark:border-[#343839]">
             <div className="flex gap-[16px] items-start">
-              <span>{settingsicons.dualingo}</span>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.25, duration: 1 }}
+                viewport={{ once: true }}>
+                {settingsicons.dualingo}
+              </motion.span>
               <h2 className="flex flex-col  font-[600] leading-[24px] text-[16px] text-[#232627] dark:text-white">
                 Duolingo
                 <span className="font-[500] leading-[24px] text-[14px] text-[#6C7275] ">
