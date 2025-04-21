@@ -191,7 +191,7 @@ function Setting({ setSettings }) {
             className={
               profile
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="profile"
             onClick={handleSwitch}>
@@ -222,7 +222,7 @@ function Setting({ setSettings }) {
             className={
               password
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="password"
             onClick={handleSwitch}>
@@ -253,7 +253,7 @@ function Setting({ setSettings }) {
             className={
               notification
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="noti"
             onClick={handleSwitch}>
@@ -284,7 +284,7 @@ function Setting({ setSettings }) {
             className={
               chat
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="chat"
             onClick={handleSwitch}>
@@ -315,7 +315,7 @@ function Setting({ setSettings }) {
             className={
               sessions
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="session"
             onClick={handleSwitch}>
@@ -346,7 +346,7 @@ function Setting({ setSettings }) {
             className={
               applications
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="application"
             onClick={handleSwitch}>
@@ -377,7 +377,7 @@ function Setting({ setSettings }) {
             className={
               team
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="team"
             onClick={handleSwitch}>
@@ -408,7 +408,7 @@ function Setting({ setSettings }) {
             className={
               appearance
                 ? "flex gap-[12px] dark:text-white text-black  w-full py-[8px] items-center  cursor-pointer border-[2px] border-[#0084FF] rounded-full px-[16px]  font-[600] leading-[24px] text-[14px]"
-                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275]"
+                : "flex gap-[12px] hover:text-black hover:dark:text-white w-full py-[8px] items-center  cursor-pointer px-[16px] font-[600] leading-[24px] text-[14px] text-[#6C7275] dark:hover:bg-[#232627] rounded-full "
             }
             id="appearance"
             onClick={handleSwitch}>
@@ -737,7 +737,9 @@ function Setting({ setSettings }) {
           {notification && <Notification />}
           {chat && <Chat />}
           {sessions && <Session />}
-          {applications && <Applications setSettings={setSettings} />}
+          {applications && (
+            <Applications setSettings={setSettings} handleClose={handleClose} />
+          )}
           {team && <Team />}
           {appearance && <Appearance />}
           {signout && <Signout />}
