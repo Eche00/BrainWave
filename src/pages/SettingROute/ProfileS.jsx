@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "../../assets";
 import { settingsicons } from "../../lib/settingsicons";
+import { motion } from "framer-motion";
 
 function ProfileS() {
   return (
@@ -15,7 +16,11 @@ function ProfileS() {
             Avatar
           </p>
           <div className=" flex  items-center gap-[16px]">
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.25, duration: 1 }}
+              viewport={{ once: true }}
               src={Avatar}
               className="w-[112px] h-[112px] rounded-full bg-[#B5E4CA] object-cover"
               alt=""
