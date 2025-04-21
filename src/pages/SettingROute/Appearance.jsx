@@ -2,6 +2,7 @@ import React from "react";
 import { settingsicons } from "../../lib/settingsicons";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../../redux/theme/themeSlice";
+import { motion } from "framer-motion";
 
 function Appearance() {
   const { theme } = useSelector((state) => state.theme);
@@ -20,16 +21,24 @@ function Appearance() {
         {/* sub container  */}
         <section className="flex sm:flex-row sm:gap-0 flex-col gap-[32px] justify-between">
           {/* each  */}
-          <div
+          <motion.div
+            initial={{ scale: 0.85 }}
+            whileInView={{ scale: 1 }}
+            transition={{ delay: 0.25, duration: 1 }}
+            viewport={{ once: true }}
             className=" p-[16px] border-[4px] border-[#0084FF] rounded-[16px] dark:border-none flex flex-col gap-[12px] dark:bg-[#232627] cursor-pointer"
             onClick={() => dispatch(setTheme("light"))}>
             <span>{settingsicons.appearancelight}</span>
             <p className=" text-[#23262780] font-[600] text-[14px] leading-[24px] dark:text-[#E8ECEF80]">
               Light mode
             </p>
-          </div>
+          </motion.div>
           {/* each  */}
-          <div
+          <motion.div
+            initial={{ scale: 0.85 }}
+            whileInView={{ scale: 1 }}
+            transition={{ delay: 0.25, duration: 1 }}
+            viewport={{ once: true }}
             className=" p-[16px]  bg-[#F3F5F7] dark:bg-transparent rounded-[16px] flex flex-col gap-[12px] dark:border-[#0084FF]  dark:border-[4px] cursor-pointer"
             onClick={() => dispatch(setTheme("dark"))}>
             <span className=" flex dark:hidden">
@@ -41,7 +50,7 @@ function Appearance() {
             <p className=" text-[#232627] dark:text-[#E8ECEF] font-[600] text-[14px] leading-[24px]">
               Dark mode
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* button section  */}
