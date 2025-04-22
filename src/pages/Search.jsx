@@ -14,6 +14,12 @@ function Search({ setSearch }) {
       setSearch(false);
     }
   };
+  const handleClosee = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSearch(false);
+  };
+
   return (
     <div
       className=" fixed w-full sm:h-[100vh] h-[100vh] left-0  bg-[#141718BF]  flex items-center justify-center z-50 overflow-hidden  "
@@ -31,10 +37,17 @@ function Search({ setSearch }) {
           className=" border-b-[1px] border-[#E8ECEF] dark:border-[#232627] sm:sm:py-[20px]  py-[16px] sm:px-[40px] px-[16px] gap-[24px] flex items-center"
           onClick={() => setSearch(true)}>
           <span className="sm:flex hidden">{searchicon.searchTop}</span>
-          <div className="flex sm:hidden" onClick={() => setSearch(false)}>
-            <spn className="dark:hidden flex">{searchicon.exitlight}</spn>
-            <spn className="hidden dark:flex">{searchicon.exitdark}</spn>
-          </div>
+          <button
+            type="button"
+            className="flex sm:hidden z-50"
+            onClick={handleClosee}>
+            <span className="dark:hidden flex cursor-pointer">
+              {searchicon.exitlight}
+            </span>
+            <span className="dark:flex hidden  cursor-pointer">
+              {searchicon.exitdark}
+            </span>
+          </button>
           <input
             type="text"
             placeholder="Search"

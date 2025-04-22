@@ -38,6 +38,11 @@ function Setting({ setSettings }) {
       setSettings(false);
     }
   };
+  const handleClosee = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSettings(false);
+  };
 
   const handleSwitch = (e) => {
     if (e.target.id === "profile") {
@@ -180,8 +185,8 @@ function Setting({ setSettings }) {
         onClick={() => setSettings(true)}
         id="hello">
         <button
-          className="  p-[20px] sm:hidden flex absolute top-0  right-0"
-          onClick={() => setSettings(false)}>
+          className="  p-[20px] sm:hidden flex absolute top-0  right-0 cursor-pointer"
+          onClick={handleClosee}>
           {settingsicons.exit}
         </button>
         {/*desktop navbarsection  */}
