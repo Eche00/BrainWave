@@ -4,6 +4,8 @@ import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import { chatlisticons } from "../../../lib/chatlisticons";
 import ScrollToTop from "../../ScrollToTop";
+import { motion } from "framer-motion";
+import Loading from "../../Loading";
 
 function Educationfeedback({ handleSwitch }) {
   const [video, setVideo] = useState(false);
@@ -29,7 +31,12 @@ function Educationfeedback({ handleSwitch }) {
           <div className="sm:w-[80%] w-[95%] flex flex-col relative ">
             <section className=" flex   sm:gap-[16px] gap-[5px] rounded-t-[20px] border-[3px] border-[#F3F5F7] dark:bg-[#34383980] dark:border-transparent sm:p-[24px] p-[10px] border-b-[0px]">
               {/* 1 */}
-              <div className="flex flex-col gap-[12px]">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className="flex flex-col gap-[12px]">
                 <div className=" w-[160px] h-[180px] rounded-[12px] bg-[#F3F5F7] dark:bg-[#343839] p-[24px] relative">
                   <span className="absolute top-5 right-5 hidden dark:flex">
                     {photoicon.deletepdfdark}
@@ -46,9 +53,14 @@ function Educationfeedback({ handleSwitch }) {
                 <p className=" text-[16px] text-[#141718] dark:text-white font-[500] leading-[24px]">
                   Student-test-p1.pdf
                 </p>
-              </div>
+              </motion.div>
               {/* 2 */}
-              <div className="flex flex-col gap-[12px]">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className="flex flex-col gap-[12px]">
                 <div className=" w-[160px] h-[180px] rounded-[12px] bg-[#F3F5F7] dark:bg-[#343839] p-[24px] relative">
                   <span className="absolute top-5 right-5 hidden dark:flex">
                     {photoicon.deletepdfdark}
@@ -65,7 +77,7 @@ function Educationfeedback({ handleSwitch }) {
                 <p className=" text-[16px] text-[#141718] dark:text-white font-[500] leading-[24px]">
                   Student-test-p2.pdf
                 </p>
-              </div>
+              </motion.div>
             </section>
 
             <p className="text-[#141718] dark:text-[#FEFEFE] text-[14px] font-[400] leading-[24px] p-[24px] pb-[64px] rounded-b-[20px] border-[3px] border-[#F3F5F7] dark:bg-[#34383980] dark:border-transparent flex flex-col gap-[24px] border-t-[0px]">
@@ -82,7 +94,11 @@ function Educationfeedback({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -94,7 +110,9 @@ function Educationfeedback({ handleSwitch }) {
         {/* Ai loading  */}
         <section className="relative flex flex-col gap-2  w-[80%]">
           <div className="relative">
-            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]">
+              <Loading />
+            </div>
           </div>
 
           <div className="flex w-full items-end justify-end">
@@ -108,18 +126,34 @@ function Educationfeedback({ handleSwitch }) {
               Pause generating
             </button>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
         </section>
 
         {/* Ai loading  */}
         <section className=" flex flex-col items-start xxs:w-[80%] w-[330px] relative   ">
           <div className="w-full flex flex-col gap-[24px] relative items-start bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px] ">
-            <section className="md:w-[600px] w-full bg-white dark:bg-[#232627] rounded-[16px] overflow-hidden">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 1 }}
+              viewport={{ once: true }}
+              className="md:w-[600px] w-full bg-white dark:bg-[#232627] rounded-[16px] overflow-hidden">
+              {" "}
               <div className="flex flex-col sm:flex-row sm:gap-0 gap-[24px] items-center justify-between p-[20px]">
                 <div className="flex items-center gap-[16px]">
                   <span>{photoicon.vgood}</span>
@@ -242,7 +276,7 @@ function Educationfeedback({ handleSwitch }) {
                   </tbody>
                 </table>
               </div>
-            </section>
+            </motion.section>
             <p className="text-[#141718] dark:text-[#FEFEFE] text-[24px] font-[400] leading-[36px]  ">
               Suggestion to improve your test
             </p>

@@ -4,6 +4,8 @@ import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import { settingsicons } from "../../../lib/settingsicons";
 import ScrollToTop from "../../ScrollToTop";
+import { motion } from "framer-motion";
+import Loading from "../../Loading";
 
 function Audiogeneration({ handleSwitch }) {
   return (
@@ -38,7 +40,11 @@ function Audiogeneration({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -68,12 +74,22 @@ function Audiogeneration({ handleSwitch }) {
               Pause generating
             </button>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
         </section>
 
         {/* user message  */}
@@ -91,7 +107,11 @@ function Audiogeneration({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -103,7 +123,9 @@ function Audiogeneration({ handleSwitch }) {
         {/* Ai loading  */}
         <section className="relative flex flex-col gap-2  w-[80%]">
           <div className="relative">
-            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]">
+              <Loading />
+            </div>
           </div>
 
           <div className="flex w-full items-end justify-end">
@@ -136,31 +158,66 @@ function Audiogeneration({ handleSwitch }) {
             </p>
             {/* categories  */}
             <section className=" flex flex-wrap items-center gap-[8px]">
-              <div className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
                 <span>{photoicon.imgcat}</span> Photo edition
-              </div>
-              <div className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
                 <span>{photoicon.videocat}</span> Video generation
-              </div>
-              <div className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
                 <span>{photoicon.photocat}</span> Photo generation
-              </div>
+              </motion.div>
             </section>
             <section className=" flex flex-wrap items-center gap-[8px]">
-              <div className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
                 <span>{photoicon.codecat}</span>Code generation
-              </div>
-              <div className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
+                className=" flex items-center gap-[12px] py-[8px] px-[16px] rounded-full bg-[#FEFEFE] dark:bg-[#232627] border-none dark:border-[1px] dark:border-[#34383980] text-[16px] text-[#141718] dark:text-[#FEFEFE] font-[600] leading-[24px]">
                 <span>{photoicon.audiocat}</span> Audio generation
-              </div>
+              </motion.div>
             </section>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
           {/* bottom  */}
           <p className="flex items-center gap-[12px] text-[12px] text-[#6C727580] font-[500] leading-[20px] w-fit ml-auto mt-2">
             Just now{" "}
@@ -205,7 +262,11 @@ function Audiogeneration({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""

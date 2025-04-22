@@ -3,6 +3,8 @@ import { photoicon } from "../../../lib/photoicon";
 import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import ScrollToTop from "../../ScrollToTop";
+import { motion } from "framer-motion";
+import Loading from "../../Loading";
 
 function Photoedition({ handleSwitch }) {
   const [exporti, setExport] = useState(false);
@@ -112,7 +114,11 @@ function Photoedition({ handleSwitch }) {
           <div className="w-[70%] flex flex-col gap-[5px] relative">
             <p className="text-[#141718] dark:text-[#FEFEFE] text-[14px] font-[400] leading-[24px] p-[24px] pb-[64px] rounded-[20px] border-[3px] border-[#F3F5F7] dark:bg-[#34383980] dark:border-transparent flex flex-col gap-[24px]">
               Retouch this photo
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black w-[100px] h-[100px] object-cover rounded-[12px]"
@@ -126,7 +132,11 @@ function Photoedition({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -138,7 +148,9 @@ function Photoedition({ handleSwitch }) {
         {/* Ai loading  */}
         <section className="relative flex flex-col gap-2 w-[80%]">
           <div className="relative">
-            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]">
+              <Loading />
+            </div>
           </div>
 
           <div className="flex w-full items-end justify-end">
@@ -152,12 +164,22 @@ function Photoedition({ handleSwitch }) {
               Pause generating
             </button>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
         </section>
         {/* Ai message  */}
         <section className=" flex flex-col items-start xxs:w-[80%] w-[330px] relative   ">
@@ -169,7 +191,11 @@ function Photoedition({ handleSwitch }) {
             </p>
             {/* img  */}
             <div className=" h-fit xxl:w-fit w-full relative">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black h-[400px]  xxl:w-[577px] w-full rounded-[12px] object-cover"
@@ -316,7 +342,11 @@ function Photoedition({ handleSwitch }) {
                       </span>
                     </h1>
                     {/* img  */}
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.35, duration: 1 }}
+                      viewport={{ once: true }}
                       src=""
                       alt="//"
                       className=" bg-black w-full h-[200px] object-cover rounded-[12px]"
@@ -377,12 +407,22 @@ function Photoedition({ handleSwitch }) {
               </button>
             </div>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
           {/* bottom  */}
           <p className="flex items-center gap-[12px] text-[12px] text-[#6C727580] font-[500] leading-[20px] w-fit ml-auto mt-2">
             Just now{" "}
@@ -413,7 +453,11 @@ function Photoedition({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -430,7 +474,11 @@ function Photoedition({ handleSwitch }) {
             </p>
             {/* img  */}
             <div className=" h-fit xxl:w-fit w-full relative">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black h-[400px]  xxl:w-[577px] w-full rounded-[12px] object-cover"
@@ -581,7 +629,11 @@ function Photoedition({ handleSwitch }) {
                       </span>
                     </h1>
                     {/* img  */}
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.35, duration: 1 }}
+                      viewport={{ once: true }}
                       src=""
                       alt="//"
                       className=" bg-black w-full h-[200px] object-cover rounded-[12px]"
@@ -642,12 +694,22 @@ function Photoedition({ handleSwitch }) {
               </button>
             </div>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
           {/* bottom  */}
           <p className="flex items-center gap-[12px] text-[12px] text-[#6C727580] font-[500] leading-[20px] w-fit ml-auto mt-2">
             Just now{" "}
@@ -672,7 +734,11 @@ function Photoedition({ handleSwitch }) {
             </p>
             {/* img  */}
             <div className=" h-fit xxl:w-fit w-full relative">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black h-[400px]  xxl:w-[577px] w-full rounded-[12px] object-cover"
@@ -819,7 +885,11 @@ function Photoedition({ handleSwitch }) {
                       </span>
                     </h1>
                     {/* img  */}
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.35, duration: 1 }}
+                      viewport={{ once: true }}
                       src=""
                       alt="//"
                       className=" bg-black w-full h-[200px] object-cover rounded-[12px]"
@@ -880,12 +950,22 @@ function Photoedition({ handleSwitch }) {
               </button>
             </div>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
           {/* bottom  */}
           <p className="flex items-center gap-[12px] text-[12px] text-[#6C727580] font-[500] leading-[20px] w-fit ml-auto mt-2">
             Just now{" "}

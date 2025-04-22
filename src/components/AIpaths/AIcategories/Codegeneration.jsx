@@ -3,6 +3,8 @@ import { photoicon } from "../../../lib/photoicon";
 import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import ScrollToTop from "../../ScrollToTop";
+import { motion } from "framer-motion";
+import Loading from "../../Loading";
 
 function Codegeneration({ handleSwitch }) {
   return (
@@ -39,7 +41,11 @@ function Codegeneration({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -51,7 +57,9 @@ function Codegeneration({ handleSwitch }) {
         {/* Ai loading  */}
         <section className="relative flex flex-col gap-2">
           <div className="relative">
-            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]">
+              <Loading />
+            </div>
           </div>
 
           <div className="flex w-full items-end justify-end">
@@ -65,17 +73,32 @@ function Codegeneration({ handleSwitch }) {
               Pause generating
             </button>
           </div>
-          <span className=" absolute left-5  bottom-[-5px] dark:block hidden ">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:block hidden ">
             {photoicon.ailogodark}
-          </span>
-          <span className=" absolute left-5  bottom-[-5px] dark:hidden block ">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 1 }}
+            viewport={{ once: true }}
+            className=" absolute left-5  bottom-[-5px] dark:hidden block ">
             {photoicon.ailogo}
-          </span>
+          </motion.span>
         </section>
         {/* Ai message  */}
         <section className=" flex flex-col items-start w-fit relative  ">
           <div className="xxs:max-w-[100%] max-w-[330px] flex flex-col gap-[5px] relative items-end bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
-            <section className="flex flex-col rounded-[12px]  overflow-hidden w-full ">
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.35, duration: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col rounded-[12px]  overflow-hidden w-full ">
               <div className=" bg-[#232627] w-full flex items-center justify-between p-[4px]">
                 <div className=" flex  w-full">
                   <button className="text-[#E8ECEF] text-[12px] font-[600] leading-[24px] sm:w-[144px] w-[95px] py-[4px] bg-transparent rounded-[8px] cursor-pointer">
@@ -223,7 +246,7 @@ function Codegeneration({ handleSwitch }) {
                   </h4>
                 </section>
               </div>
-            </section>
+            </motion.section>
             <p className="text-[#141718] dark:text-[#FEFEFE] text-[14px] font-[400] leading-[24px] p-[24px] rounded-[20px] border-[3px] border-[#F3F5F7]  dark:border-transparent">
               Note: This is just an example of a simple HTML form. In a
               real-world scenario, you would also want to include proper

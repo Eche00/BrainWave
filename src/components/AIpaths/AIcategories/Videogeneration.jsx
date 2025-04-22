@@ -4,6 +4,8 @@ import { homeicons } from "../../../lib/homeicons";
 import { Avatar } from "../../../assets";
 import { settingsicons } from "../../../lib/settingsicons";
 import ScrollToTop from "../../ScrollToTop";
+import { motion } from "framer-motion";
+import Loading from "../../Loading";
 
 function Videogeneration({ handleSwitch }) {
   return (
@@ -38,7 +40,11 @@ function Videogeneration({ handleSwitch }) {
               training session, our AI-powered technology makes it easy to
               create professional-looking videos that grab attention and drive
               results. Try it out today and see the difference for yourself!"
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black w-[100px] h-[100px] object-cover rounded-[12px]"
@@ -52,7 +58,11 @@ function Videogeneration({ handleSwitch }) {
             </p>
 
             <span className=" absolute right-5 bottom-0">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 className=" w-[64px] h-[64px] bg-[#B5E4CA] rounded-[16px] object-cover"
                 src={Avatar}
                 alt=""
@@ -64,7 +74,9 @@ function Videogeneration({ handleSwitch }) {
         {/* Ai loading  */}
         <section className="relative flex flex-col gap-2  w-[80%]">
           <div className="relative">
-            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]"></div>
+            <div className="w-full bg-[#F3F5F7] dark:bg-[#141718] rounded-[20px] h-[92px]">
+              <Loading />
+            </div>
           </div>
 
           <div className="flex w-full items-end justify-end">
@@ -91,7 +103,11 @@ function Videogeneration({ handleSwitch }) {
           <div className="w-full flex flex-col gap-[24px] relative items-start bg-[#F3F5F7] dark:bg-[#141718] sm:pt-[24px] sm:pr-[24px] sm:pl-[24px] pt-[16px] pr-[16px] pl-[16px] rounded-[20px] pb-[64px]">
             {/* img  */}
             <div className=" h-fit  xl:w-full w-full relative">
-              <img
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.35, duration: 1 }}
+                viewport={{ once: true }}
                 src=""
                 alt="//"
                 className=" bg-black h-[325px]  xl:w-[80%] w-full rounded-[12px] object-cover"
